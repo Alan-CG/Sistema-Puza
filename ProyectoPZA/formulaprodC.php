@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include 'model/consultaprodfor.php' ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +13,13 @@
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style_general.css">
-    <title>Clientes</title>
+    <title>Formula de productos</title>
 </head>
 
-<body>
+<body> 
+    <!--
+        A continuación se insertan clases y se modifican con CSS en línea de código
+    -->
     <style>
         .puntero{
             cursor:pointer;
@@ -24,15 +27,8 @@
         .ocultar{
             display:none;
         }
-
     </style>
-
-
-
-
-
-
-
+    <!--////////////-->
     <header>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -42,27 +38,45 @@
         </div>
     </header>
     <div class="container">
-        <h4 class="text-center">Creación de Formula de Producto</h4>
-        <br>
-        <div class="row">
-            <div class="col">
-                <button id="agregar" class="btn btn-primary">Agregar Materia Prima</button>
-            </div>
-        </div>
+        <h4 class="text-center">Alta de Nuevo Producto</h4>
         <br>
         <form action="" method="post" class="needs-validation" novalidate>
-            <div class="form-row clonar">
-                <div class="form-group col-md-4">
+            <h5 class="text-align-left">Datos básicos del producto</h5>
+            <div class="form-row">
+                <div class="col-md-6">
                     <label for="input_nombreprod">Nombre del producto</label>
                     <input type="text" class="form-control" id="input_nombreprod" placeholder="Nombre del nuevo producto" name="input_nombreclient" required>
-                    <span class="badge badge-danger puntero ocultar">Eliminar</span>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="input_matprim">Materia Prima</label>
-                    <select class="custom-select" id="input_matprim" name="input_matprim"></select>
+                <div class="col-md-6">
+                    <label for="input_desprod">Descripción</label>
+                    <input type="text" class="form-control" id="input_desprod" placeholder="Nombre del nuevo producto" name="input_desprod" required>
+                    <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
-                <div class="form-group col-md-4">
+            </div>
+            <br>
+            <!--
+                El siguiente row es el correspondiente a los campos dinámicos que permiten el registro 
+                de las materias primas necesarias para fabricar un producto en particular("Formula del producto")
+            -->
+            <h5 class="text-align-left">Formula del producto</h5>
+            <div class="row">
+                <div class="col">
+                    <button id="agregar" class="btn btn-primary">Agregar Materia Prima</button>
+                </div>
+            </div>
+            <br> 
+            <div class="form-row clonar">
+                <div class="form-group col-md-6">
+                    <label for="input_matprim">Materia Prima</label>
+                    <select class="custom-select" id="input_matprim" name="input_matprim">
+                     <?php foreach ($opciones_select as $opciones): ?>
+                        <option value="<?php echo $opciones['IDmateriaprima'] ?>"><?php echo $opciones['NombreMateria'] ?></option>
+                     <?php endforeach ?>
+                    </select>
+                    <span class="badge badge-danger puntero ocultar">Eliminar</span>
+                </div>
+                <div class="form-group col-md-6">
                     <label for="input_cantmat">Cantidad Necesaria</label>
                     <input type="number" class="form-control" id="input_cantmat" placeholder="Cantidad requerida para el producto" name="input_cantmat" required>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
@@ -82,6 +96,17 @@
             </div>
         </div>
     </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <!--
+        Sección para los Scripts JavaScript
+    -->
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
