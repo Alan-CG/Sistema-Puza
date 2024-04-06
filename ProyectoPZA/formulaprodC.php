@@ -40,7 +40,7 @@
     <div class="container">
         <h4 class="text-center">Alta de Nuevo Producto</h4>
         <br>
-        <form action="" method="post" class="needs-validation" novalidate>
+        <form action="model/altaproductos.php" method="POST" class="needs-validation" novalidate>
             <h5 class="text-align-left">Datos básicos del producto</h5>
             <div class="form-row">
                 <div class="col-md-6">
@@ -69,7 +69,7 @@
             <div class="form-row clonar">
                 <div class="form-group col-md-6">
                     <label for="input_matprim">Materia Prima</label>
-                    <select class="custom-select" id="input_matprim" name="input_matprim">
+                    <select class="custom-select" id="input_matprim" name="input_matprim[]">
                      <?php foreach ($opciones_select as $opciones): ?>
                         <option value="<?php echo $opciones['IDmateriaprima'] ?>"><?php echo $opciones['NombreMateria'] ?></option>
                      <?php endforeach ?>
@@ -78,14 +78,14 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="input_cantmat">Cantidad Necesaria</label>
-                    <input type="number" class="form-control" id="input_cantmat" placeholder="Cantidad requerida para el producto" name="input_cantmat" required>
+                    <input type="number" class="form-control" id="input_cantmat" placeholder="Cantidad requerida para el producto" name="input_cantmat[]" required>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
             </div>
             <div id="contenedor"></div>
             <div class="form-row">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button  type="submit" class="btn btn-primary">Registrar</button>
                 </div>
             </div>
 
