@@ -1,7 +1,7 @@
 <?php
 // Variables
 $hostDB = '127.0.0.1';
-$nombreDB = 'puza';
+$nombreDB = 'bd_puza';
 $usuarioDB = 'root';
 $contrasenyaDB = '';
 $codigo = isset($_REQUEST['IDproductosterminados']) ? $_REQUEST['IDproductosterminados'] : null;

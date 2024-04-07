@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fechaentrada = isset($_REQUEST['input_fentrada']) ? $_REQUEST['input_fentrada'] : null;
     // Variables
     $hostDB = '127.0.0.1';
-    $nombreDB = 'puza';
+    $nombreDB = 'bd_puza';
     $usuarioDB = 'root';
     $contrasenyaDB = '';
     // Conecta con base de datos
