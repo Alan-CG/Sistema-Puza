@@ -54,6 +54,11 @@
                     <input type="text" class="form-control" id="input_desprod" placeholder="Nombre del nuevo producto" name="input_desprod" required>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
+                <div class="col-md-6">
+                    <label for="input_ganancia">Margen de ganancia</label>
+                    <input type="number" class="form-control" id="input_ganancia" placeholder="Introduce el porcentaje de ganancia" name="input_ganancia" required>
+                    <div class="invalid-feedback">Rellena el campo correctamente</div>
+                </div>
             </div>
             <br>
             <!--

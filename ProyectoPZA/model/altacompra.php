@@ -25,4 +25,4 @@ $miInsert->execute(
     )
 );
 
-header('Location: ../comprasC.php');
+header('Location: ../comprasR.php');

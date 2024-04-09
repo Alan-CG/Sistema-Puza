@@ -105,22 +105,26 @@ try {
 //Paso 1: Según mí idea primero debes capturar el dato de porcentaje el que usuario introdujo en el formulario, 
 //checa la forma de que ya venga en punto decimal tipo : si es el 50% que ya te llegue como 0.5 o si no igual
 //podrías hacer la transformación más adelante a punto decimal
-function calcularPrecioVenta($costo_final, $margen_ganancia) {
-    // Calcula el precio de venta sumando el margen de ganancia al costo final
-    $precio_venta = $costo_final * (1 + ($margen_ganancia / 100));
-    return $precio_venta;
-}
-// Calcular el precio de venta con un margen de ganancia del 30%
-$margen_ganancia = 30; // Puedes ajustar este valor según sea necesario
 
-$precio_venta = calcularPrecioVenta($costo_final, $margen_ganancia);
+$margen_ganancia=$_POST['input_ganancia'];
+
+$costo_producto= $miPDO->prepare('SELECT PrecioCosto FROM productos 
+        WHERE IDproducto = :idprod');
+
+$costo_producto->execute([
+    'idprod'=>$idproducto
+]);
+
+$costo_producto_valor = $costo_producto->fetchColumn();
+
+$calculo= $costo_producto_valor * ($margen_ganancia/100);
+$precio_venta_final = $costo_producto_valor + $calculo;
+
 
 // Actualizar el precio de venta en la base de datos
-$miupdate = $miPDO->prepare('UPDATE productos SET PrecioCosto = :calculopreciocosto, PrecioVenta = :precioventa 
-WHERE IDproducto = :idproducto');
+$miupdate = $miPDO->prepare('UPDATE productos SET PrecioProducto = :preciofinal WHERE IDproducto = :idproducto');
 $miupdate->execute([
-    'calculopreciocosto' => $costo_final,
-    'precioventa' => $precio_venta,
+    'preciofinal' => $precio_venta_final,
     'idproducto' => $idproducto
 ]);
 

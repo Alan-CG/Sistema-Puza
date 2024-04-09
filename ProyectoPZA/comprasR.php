@@ -1,4 +1,4 @@
-<?php include 'model/consultaprodfor.php' ?>
+<?php include 'model/consultacompra.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +14,7 @@
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/style_general.css">
-  <title>Proveedores</title>
+  <title>Compras</title>
 </head>
 
 <body>
@@ -28,34 +28,50 @@
     </div>
   </header>
   <div class="container">
-    <h4 class="text-center">Registro de compra Materia Primas</h4>
-    <form action="model/altacompra.php" method="POST" class="needs-validation" novalidate>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="input_nombremat">Materia Prima</label>
-          <select class="form-control" id="input_nombremat" name="input_nombremat">
-          <?php foreach ($opciones_select as $opciones): ?>
-                        <option value="<?php echo $opciones['IDmateriaprima'] ?>"><?php echo $opciones['NombreMateria'] ?></option>
-                     <?php endforeach ?>
-          </select>
+    <h4 class="text-center">Compras</h4>
+    <div class="form-row">
+        <div class="form-group col">
+            <a class="btn btn-primary" href="comprasC.php">Nueva compra</a>
         </div>
-        <div class="form-group col-md-6">
-          <label for="input_cantidad">Cantidad Materia Prima</label>
-          <input type="number" class="form-control" id="input_cantidad" name="input_cantidad"></input>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="input_Fecha">Fecha de entrada</label>
-          <input type="date" class="form-control" id="input_Fecha" name="input_Fecha"></input>
-        </div>
-      </div>
-      <div class="form-row">
-        <button  type="submit" class="btn btn-primary">Registrar</button>
-      </div>
-
-    </form>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Materia prima</th>
+                    <th scope="col">Cantidad Comprada</th>
+                    <th scope="col">Fecha de compra</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($miConsulta as $clave => $valor): ?>
+            <tr>
+              <td>
+                <?= $valor['NombreMateria']; ?>
+              </td>
+              <td>
+                <?= $valor['Cantidad_Compra']; ?>
+              </td>
+              <td>
+                <?= $valor['Fecha_Entrada']; ?>
+              </td>
+              <td>
+                <a class="btn btn-success" href="comprasU.php?ID_Compra=<?= $valor['ID_Compra'] ?>">Modificar</a>
+              </td>
+              <td>
+                <a class="btn btn-danger"
+                  href="model/borrarcompra.php?ID_Compra=<?= $valor['ID_Compra'] ?>">Eliminar</a>
+              </td>
+            </tr>
+          <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
     <div class="row w-100 align-items-center">
       <div class="col text-center">
-      <a href="comprasR.php" class="btn btn-primary">Regresar</a>
+      <a href="menuprove.php" class="btn btn-primary">Regresar</a>
     </div>
   </div>
 </div>
