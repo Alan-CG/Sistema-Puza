@@ -29,7 +29,7 @@
     </div>
   </header>
   <div class="container">
-    <h4 class="text-center">Registrar proveedores</h4>
+    <h4 class="text-center">Modificar  proveedores</h4>
     <form method="post" class="needs-validation" novalidate>
       <div class="form-row">
           <div class="form-group col-md-6">
