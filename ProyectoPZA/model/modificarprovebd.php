@@ -5,6 +5,7 @@ $nombreDB = 'bd_puza';
 $usuarioDB = 'root';
 $contrasenyaDB = '';
 $codigo = isset($_REQUEST['IDproveedor']) ? $_REQUEST['IDproveedor'] : null;
+$RFC = isset($_REQUEST['input_RFCproveedor']) ? $_REQUEST['input_RFCproveedor'] : null;
 $nombre = isset($_REQUEST['input_nombreproveedor']) ? $_REQUEST['input_nombreproveedor'] : null;
 $nombre_represent = isset($_REQUEST['input_representprove']) ? $_REQUEST['input_representprove'] : null;
 $telefono = isset($_REQUEST['input_telefonoprove']) ? $_REQUEST['input_telefonoprove'] : null;
@@ -22,7 +23,7 @@ $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepara UPDATE
     $miUpdate = $miPDO->prepare('UPDATE proveedores 
-    SET NombreProveedor = :NombreProveedor, Nombre_representante = :Nombre_representante, 
+    SET RFC_proveedor=:RFC_proveedor,NombreProveedor = :NombreProveedor, Nombre_representante = :Nombre_representante, 
     TelefonoProveedor = :TelefonoProveedor, CorreoProveedor = :CorreoProveedor, CalleProveedor = :CalleProveedor,
     ColoniaProveedor = :ColoniaProveedor, CodigopostalProveedor = :CodigopostalProveedor, IDestado = :IDestado
      WHERE IDproveedor = :IDproveedor');
@@ -30,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $miUpdate->execute(
         [
             'IDproveedor' => $codigo,
+            'RFC_proveedor'=>$RFC,
             'NombreProveedor' => $nombre,
             'Nombre_representante' => $nombre_represent,
             'TelefonoProveedor' => $telefono,

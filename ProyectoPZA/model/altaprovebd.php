@@ -2,6 +2,7 @@
 // Comprobamso si recibimos datos por POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Recogemos variables
+    $RFC = isset($_REQUEST['input_RFCproveedor']) ? $_REQUEST['input_RFCproveedor'] : null;
     $nombre = isset($_REQUEST['input_nombreproveedor']) ? $_REQUEST['input_nombreproveedor'] : null;
     $nombre_represent = isset($_REQUEST['input_representprove']) ? $_REQUEST['input_representprove'] : null;
     $telefono = isset($_REQUEST['input_telefonoprove']) ? $_REQUEST['input_telefonoprove'] : null;
@@ -19,12 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
     $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
     // Prepara INSERT
-    $miInsert = $miPDO->prepare('INSERT INTO proveedores (NombreProveedor, Nombre_representante, 
+    $miInsert = $miPDO->prepare('INSERT INTO proveedores (RFC_proveedor,NombreProveedor, Nombre_representante, 
     TelefonoProveedor, CorreoProveedor, CalleProveedor, ColoniaProveedor, CodigopostalProveedor,IDestado,estadoProveedor) 
-    VALUES (:NombreProveedor,:Nombre_representante,:TelefonoProveedor,:CorreoProveedor,:CalleProveedor,:ColoniaProveedor,:CodigopostalProveedor,:IDestado,:estadoProveedor)');
+    VALUES (:RFC_proveedor,:NombreProveedor,:Nombre_representante,:TelefonoProveedor,:CorreoProveedor,:CalleProveedor,:ColoniaProveedor,:CodigopostalProveedor,:IDestado,:estadoProveedor)');
     // Ejecuta INSERT con los datos
     $miInsert->execute(
         array(
+            'RFC_proveedor'=>$RFC,
             'NombreProveedor' => $nombre,
             'Nombre_representante' => $nombre_represent,
             'TelefonoProveedor' => $telefono,

@@ -1,5 +1,6 @@
 <?php
 if (isset($_POST['submit'])){
+$RFC=$_POST['input_RFCproveedor'];  
 $nombrevalida= $_POST['input_nombreproveedor'];
 $representantevalida= $_POST['input_representprove'];
 $telefonovalida= $_POST['input_telefonoprove'];
@@ -43,6 +44,14 @@ $codigopostalvalida= $_POST['input_provecp'];
     <h4 class="text-center">Registrar proveedores</h4>
     <form action="" method="post" class="needs-validation" novalidate>
       <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="input_RFCproveedor">RFC</label>
+            <input type="text" class="form-control" id="input_RFCproveedor" name="input_RFCproveedor"
+              placeholder="RFC del proveedor" required>
+              <div class="invalid-feedback">
+          Rellena el campo correctamente
+        </div>
+          </div>
         <div class="form-group col-md-6">
           <label for="input_nombreproveedor">Nombre</label>
           <input type="text" class="form-control" id="input_nombreproveedor" name="input_nombreproveedor"

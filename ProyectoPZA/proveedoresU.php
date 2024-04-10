@@ -32,73 +32,82 @@
     <h4 class="text-center">Registrar proveedores</h4>
     <form method="post" class="needs-validation" novalidate>
       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="input_nombreproveedor">Nombre</label>
-          <input type="text" class="form-control" id="input_nombreproveedor" name="input_nombreproveedor"
-            value="<?= $proveedor['NombreProveedor'] ?>" required>
+          <div class="form-group col-md-6">
+          <label for="input_RFCproveedor">RFC</label>
+          <input type="text" class="form-control" id="input_RFCproveedor" name="input_RFCproveedor"
+            value="<?= $proveedor['RFC_proveedor'] ?>" required>
             <div class="invalid-feedback">
-        Rellena el campo correctamente
-      </div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="input_representprove">Representante</label>
-          <input type="text" class="form-control" id="input_representprove" name="input_representprove"
-            value="<?= $proveedor['Nombre_representante'] ?>" required>
-            <div class="invalid-feedback">
-        Rellena el campo correctamente
-      </div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="input_telefonoprove">Teléfono</label>
-          <input type="tel" class="form-control" id="input_telefonoprove" name="input_telefonoprove"
-            value="<?= $proveedor['TelefonoProveedor'] ?>" required>
-            <div class="invalid-feedback">
-        Rellena el campo correctamente
-      </div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="input_correoprove">Correo</label>
-          <input type="email" class="form-control" id="input_correoprove" name="input_correoprove"
-            value="<?= $proveedor['CorreoProveedor'] ?>" required>
-            <div class="invalid-feedback">
-        Rellena el campo correctamente
-      </div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="input_proveestado">Estado</label>
-          <select class="custom-select" name="input_proveestado" id="input_proveestado" value="<?= $proveedor['IDestado'] ?>">
-          <?php foreach ($ejecutar as $opciones): ?>
-              <option value="<?php echo $opciones['ID_estado'] ?>"><?php echo $opciones['Estado'] ?></option>
-            <?php endforeach ?>
-          </select>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="input_provecalle">Calle</label>
-          <input type="text" class="form-control" id="input_provecalle" name="input_provecalle" 
-          value="<?= $proveedor['CalleProveedor'] ?>" required>
-          <div class="invalid-feedback">
-        Rellena el campo correctamente
-      </div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="input_provecolonia">Colonia</label>
-          <input type="text" class="form-control" id="input_provecolonia" name="input_provecolonia" 
-          value="<?= $proveedor['ColoniaProveedor'] ?>" required>
-          <div class="invalid-feedback">
-        Rellena el campo correctamente
-      </div>
-        </div>
-        <div class="form-group col-md-6">
-          <label for="input_provecp">Código Postal</label>
-          <input type="text" class="form-control" id="input_provecp" name="input_provecp" 
-          value="<?= $proveedor['CodigopostalProveedor'] ?>" required>
-          <div class="invalid-feedback">
-        Rellena el campo correctamente
-      </div>
-        </div>
-      </div>
-      <input type="hidden" name="IDproveedor" value="<?= $codigo ?>">
-      <input type="submit" value="Guardar" class="btn btn-primary" >
+                Rellena el campo correctamente
+              </div>
+          </div>
+            <div class="form-group col-md-6">
+              <label for="input_nombreproveedor">Nombre</label>
+              <input type="text" class="form-control" id="input_nombreproveedor" name="input_nombreproveedor"
+                value="<?= $proveedor['NombreProveedor'] ?>" required>
+              <div class="invalid-feedback">
+                Rellena el campo correctamente
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="input_representprove">Representante</label>
+              <input type="text" class="form-control" id="input_representprove" name="input_representprove"
+                value="<?= $proveedor['Nombre_representante'] ?>" required>
+              <div class="invalid-feedback">
+                Rellena el campo correctamente
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="input_telefonoprove">Teléfono</label>
+              <input type="tel" class="form-control" id="input_telefonoprove" name="input_telefonoprove"
+                value="<?= $proveedor['TelefonoProveedor'] ?>" required>
+              <div class="invalid-feedback">
+                Rellena el campo correctamente
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="input_correoprove">Correo</label>
+              <input type="email" class="form-control" id="input_correoprove" name="input_correoprove"
+                value="<?= $proveedor['CorreoProveedor'] ?>" required>
+              <div class="invalid-feedback">
+                Rellena el campo correctamente
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="input_proveestado">Estado</label>
+              <select class="custom-select" name="input_proveestado" id="input_proveestado"
+                value="<?= $proveedor['IDestado'] ?>">
+                <?php foreach ($ejecutar as $opciones): ?>
+                  <option value="<?php echo $opciones['ID_estado'] ?>"><?php echo $opciones['Estado'] ?></option>
+                <?php endforeach ?>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="input_provecalle">Calle</label>
+              <input type="text" class="form-control" id="input_provecalle" name="input_provecalle"
+                value="<?= $proveedor['CalleProveedor'] ?>" required>
+              <div class="invalid-feedback">
+                Rellena el campo correctamente
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="input_provecolonia">Colonia</label>
+              <input type="text" class="form-control" id="input_provecolonia" name="input_provecolonia"
+                value="<?= $proveedor['ColoniaProveedor'] ?>" required>
+              <div class="invalid-feedback">
+                Rellena el campo correctamente
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="input_provecp">Código Postal</label>
+              <input type="text" class="form-control" id="input_provecp" name="input_provecp"
+                value="<?= $proveedor['CodigopostalProveedor'] ?>" required>
+              <div class="invalid-feedback">
+                Rellena el campo correctamente
+              </div>
+            </div>
+          </div>
+          <input type="hidden" name="IDproveedor" value="<?= $codigo ?>">
+          <input type="submit" value="Guardar" class="btn btn-primary">
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">
@@ -107,25 +116,25 @@
     </div>
   </div>
   <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
       }, false);
-    });
-  }, false);
-})();
-</script>
+    })();
+  </script>
 </body>
 
 </html>

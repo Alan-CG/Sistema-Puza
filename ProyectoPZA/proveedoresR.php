@@ -38,6 +38,7 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
+            <th scope="col">RFC</th>
             <th scope="col">Nombre</th>
             <th scope="col">Representante</th>
             <th scope="col">Teléfono</th>
@@ -53,6 +54,9 @@
             <tr>
               <td>
                 <?= $valor['IDproveedor']; ?>
+              </td>
+              <td>
+                <?= $valor['RFC_proveedor']; ?>
               </td>
               <td>
                 <?= $valor['NombreProveedor']; ?>
