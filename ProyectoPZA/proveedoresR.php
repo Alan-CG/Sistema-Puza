@@ -28,10 +28,11 @@
       </div>
     </div>
   </header>
-  <div class="container">
-    <h3 class="text-center">Lista de Proveedores</h3>
-  </div>
-  </div>
+ <div class="container">
+  <h3 class="text-center">Lista de Proveedores</h3>
+  <a class="btn btn-primary" href="proveedoresC.php" >Registrar Nuevo Proveedor</a>
+  <br>
+  <br>
   <div class="row w-100 align-items-center">
     <div class="col text-center">
       <table class="table table-bordered">
@@ -51,50 +52,51 @@
         </thead>
         <tbody>
           <?php foreach ($miConsulta as $clave => $valor): ?>
-            <tr>
-              <td>
-                <?= $valor['IDproveedor']; ?>
-              </td>
-              <td>
-                <?= $valor['RFC_proveedor']; ?>
-              </td>
-              <td>
-                <?= $valor['NombreProveedor']; ?>
-              </td>
-              <td>
-                <?= $valor['Nombre_representante']; ?>
-              </td>
-              <td>
-                <?= $valor['TelefonoProveedor']; ?>
-              </td>
-              <td>
-                <?= $valor['CorreoProveedor']; ?>
-              </td>
-              <td>
-                <?= $valor['CalleProveedor']; ?>
-              </td>
-              <td>
-                <?= $valor['ColoniaProveedor']; ?>
-              </td>
-              <td>
-                <?= $valor['CodigopostalProveedor']; ?>
-              <td>
-                <?= $valor['Estado']; ?>
-              </td>
-              </td>
-              <td>
-                <a class="btn btn-primary" href="proveedoresU.php?IDproveedor=<?= $valor['IDproveedor'] ?>">Modificar</a>
-              </td>
-              <td>
-                <a class="btn btn-primary"
-                  href="model/borrarprovebd.php?IDproveedor=<?= $valor['IDproveedor'] ?>">Eliminar</a>
-              </td>
-            </tr>
+          <tr>
+            <td>
+              <?= $valor['IDproveedor']; ?>
+            </td>
+            <td>
+              <?= $valor['RFC_proveedor']; ?>
+            </td>
+            <td>
+              <?= $valor['NombreProveedor']; ?>
+            </td>
+            <td>
+              <?= $valor['Nombre_representante']; ?>
+            </td>
+            <td>
+              <?= $valor['TelefonoProveedor']; ?>
+            </td>
+            <td>
+              <?= $valor['CorreoProveedor']; ?>
+            </td>
+            <td>
+              <?= $valor['CalleProveedor']; ?>
+            </td>
+            <td>
+              <?= $valor['ColoniaProveedor']; ?>
+            </td>
+            <td>
+              <?= $valor['CodigopostalProveedor']; ?>
+            <td>
+              <?= $valor['Estado']; ?>
+            </td>
+            </td>
+            <td>
+              <a class="btn btn-primary" href="proveedoresU.php?IDproveedor=<?= $valor['IDproveedor'] ?>">Modificar</a>
+            </td>
+            <td>
+              <a class="btn btn-primary"
+                href="model/borrarprovebd.php?IDproveedor=<?= $valor['IDproveedor'] ?>">Eliminar</a>
+            </td>
+          </tr>
           <?php endforeach; ?>
         </tbody>
       </table>
       <a href="menuprove.php" class="btn btn-primary">Regresar</a>
     </div>
+   </div>
   </div>
 </body>
 

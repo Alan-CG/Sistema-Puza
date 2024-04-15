@@ -55,7 +55,7 @@
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
                 <div class="col-md-6">
-                    <label for="input_ganancia">Margen de ganancia</label>
+                    <label for="input_ganancia">Utilidad</label>
                     <input type="number" class="form-control" id="input_ganancia" placeholder="Introduce el porcentaje de ganancia" name="input_ganancia" required>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
@@ -98,7 +98,7 @@
         </form>
         <div class="row w-100 align-items-center">
             <div class="col text-center">
-                <a href="menuclientes.php" class="btn btn-primary">Regresar</a>
+                <a href="" class="btn btn-primary">Regresar</a>
             </div>
         </div>
     </div>
