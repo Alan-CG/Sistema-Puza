@@ -1,5 +1,7 @@
-<?php include 'model/altaprodterbd.php' ?>
-<?php include 'model/consultaprodterbd.php' ?>
+<!-- ?php include 'model/altaprodterbd.php' ?> -->
+<!-- ?php include 'model\consultaprodterbd.php' ?> -->
+<!-- Error el las 2 primeras lineas, revisar -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,7 +93,7 @@
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">
-        <a href="menuprodterm.php" class="btn btn-primary">Regresar</a>
+        <a href="prodtermR.php" class="btn btn-primary">Regresar</a>
       </div>
     </div>
   </div>

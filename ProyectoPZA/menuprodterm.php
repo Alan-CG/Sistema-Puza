@@ -19,7 +19,7 @@
             </div>
           </div>
  </header>
-    <div class="container">
+    <!-- <div class="container">
       <h3 class="text-center">Productos terminados</h3>
         <div class="row">
             <div class="col-sm-6">
@@ -30,7 +30,7 @@
                   <a href="prodtermC.php" class="btn btn-primary">Acceder</a>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!--<div class="col-sm-6">
               <div class="card">
                 <div class="card-body">

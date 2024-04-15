@@ -21,7 +21,7 @@
  </header>
     <div class="container">
       <h3 class="text-center">Materias Primas</h3>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
@@ -30,7 +30,7 @@
                   <a href="matprimC.php" class="btn btn-primary">Acceder</a>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-md-6">
               <div class="card">
                 <div class="card-body">

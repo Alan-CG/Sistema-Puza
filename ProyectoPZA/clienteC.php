@@ -108,7 +108,7 @@
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">
-        <a href="menuclientes.php" class="btn btn-primary">Regresar</a>
+        <a href="clienteR.php" class="btn btn-primary">Regresar</a>
       </div>
     </div>
   </div>

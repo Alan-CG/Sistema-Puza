@@ -20,6 +20,7 @@
             </div>
           </div>
  </header>
+ <a href="matprimC.php" class="btn btn-primary">Registrar Nuevo Cliente</a> 
     <div class="container">
       <h3 class="text-center"> Lista de materias primas</h3>
       </div>
