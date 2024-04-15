@@ -1,4 +1,5 @@
-<?php include 'model/consultaprodterbd.php' ?>
+<!-- ?php include 'model/consultaprodterbd.php' ?> -->
+<!-- Error en la primera linea, mismo problema que prodtermC.php -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +29,7 @@
             </div>
         </div>
     </header>
+    <a href="prodtermC.php" class="btn btn-primary">Registrar producto terminado</a>
     <div class="container">
         <h3 class="text-center">Lista de Productos Terminados</h3>
     </div>

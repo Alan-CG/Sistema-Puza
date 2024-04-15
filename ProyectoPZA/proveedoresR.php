@@ -28,6 +28,7 @@
       </div>
     </div>
   </header>
+  <a href="proveedoresC.php" class="btn btn-primary">Registar nuevo proveedor</a>
   <div class="container">
     <h3 class="text-center">Lista de Proveedores</h3>
   </div>

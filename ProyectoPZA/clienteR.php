@@ -19,6 +19,8 @@
               <p class="lead">Sistema de inventario</p>
             </div>
           </div>
+
+        <a href="clienteC.php" class="btn btn-primary">Registrar Clientes</a> 
  </header>
     <div class="container">
       <h3 class="text-center">Lista de clientes</h3>

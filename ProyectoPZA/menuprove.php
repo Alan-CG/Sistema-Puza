@@ -22,7 +22,7 @@
     <div class="container">
       <h3 class="text-center">Proveedores</h3>
         <div class="row">
-            <div class="col-sm-6">
+            <!-- <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Registrar Proveedores</h5>
@@ -30,7 +30,7 @@
                   <a href="proveedoresC.php" class="btn btn-primary">Acceder</a>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">

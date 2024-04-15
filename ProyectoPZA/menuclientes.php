@@ -1,3 +1,4 @@
+<!-- Se inabilito el segundo boton para reestructurar -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,7 @@
     <div class="container">
        <h3 class="text-center">Lista de clientes</h3>
         <div class="row">
-            <div class="col-sm-6">
+            <!-- <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Registrar clientes</h5>
@@ -30,9 +31,9 @@
                   <a href="clienteC.php" class="btn btn-primary">Acceder</a>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-sm-6">
-              <div class="card">
+              <div class="card center">
                 <div class="card-body">
                   <h5 class="card-title">Mostrar lista de clientes</h5>
                   <p class="card-text">Mostrar la lista donde podemos encontar los nombres de los clientes</p>

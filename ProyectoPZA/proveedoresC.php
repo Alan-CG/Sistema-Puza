@@ -121,7 +121,7 @@ $codigopostalvalida= $_POST['input_provecp'];
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">
-        <a href="menuprove.php" class="btn btn-primary">Regresar</a>
+        <a href="proveedoresR.php" class="btn btn-primary">Regresar</a>
       </div>
     </div>
   </div>
