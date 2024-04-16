@@ -66,19 +66,19 @@
         <div id="campo_razonsocial" class="form-group col-md-6 esconder">
           <label for="input_razonsocial">Razón Social</label>
           <input type="text" class="form-control" id="input_razonsocial" name="input_razonsocial"
-            placeholder="Razón social del proveedor" required>
+            placeholder="Razón social del proveedor">
           <div class="invalid-feedback">Rellena el campo correctamente</div>
         </div>
         <div id="campo_nombreproveedor" class="form-group col-md-6 esconder">
           <label for="input_nombreproveedor">Nombre</label>
           <input type="text" class="form-control" id="input_nombreproveedor" name="input_nombreproveedor"
-            placeholder="Nombre del proveedor" required>
+            placeholder="Nombre del proveedor" >
           <div class="invalid-feedback">Rellena el campo correctamente</div>
         </div>
         <div  id="campo_representprove" class="form-group col-md-6 esconder">
           <label for="input_representprove">Representante</label>
           <input type="text" class="form-control" id="input_representprove" name="input_representprove"
-            placeholder="Nombre del representante del proveedor" required>
+            placeholder="Nombre del representante del proveedor">
           <div class="invalid-feedback">Rellena el campo correctamente</div>
         </div>
         <div class="form-group col-md-6">
@@ -166,6 +166,7 @@
     })();
   </script>
 
+
   <script type="text/javascript">
     //El siguiente es un script Javascript que se encarga de ocultar los campos en función del tipo de RFC
     function activacampos(answer){
@@ -174,17 +175,20 @@
         document.getElementById('campo_razonsocial').classList.remove('esconder');
         document.getElementById('campo_representprove').classList.remove('esconder');
         document.getElementById('campo_rfc12').classList.remove('esconder');
+        document.getElementById('input_nombreproveedor').value='n/a';
+        document.getElementById('input_rfc13').value='0000000000000'; 
         document.getElementById('campo_nombreproveedor').classList.add('esconder');
         document.getElementById('campo_rfc13').classList.add('esconder'); 
-        document.getElementById('input_nombreproveedor').value='';
-        document.getElementById('input_rfc13').value=''; 
       }else if (answer.value==0){
         document.getElementById('campo_razonsocial').classList.add('esconder');
         document.getElementById('campo_representprove').classList.add('esconder');
         document.getElementById('campo_rfc12').classList.add('esconder');
-        document.getElementById('input_razonsocial').value='';
-        document.getElementById('input_representprove').value='';
-        document.getElementById('input_rfc12').value='';
+        document.getElementById('input_razonsocial').value='n/a';
+        document.getElementById('input_representprove').value='n/a';
+        document.getElementById('input_rfc12').value='n/a';
+        
+        document.getElementById('input_nombreproveedor').value='';
+        document.getElementById('input_rfc13').value=''; 
         document.getElementById('campo_rfc13').classList.remove('esconder');
         document.getElementById('campo_nombreproveedor').classList.remove('esconder');
       }else if(answer.value==2){

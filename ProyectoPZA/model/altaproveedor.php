@@ -56,7 +56,8 @@
             'ColoniaProveedor'=> $colonia,
             'CodigopostalProveedor'=> $cp,
             'IDestado'=> $estado,
-            'EstadoProveedor' => 1
+            'EstadoProveedor' => 1,
+            'Municipio'=>$municipio
         )
     );
 
