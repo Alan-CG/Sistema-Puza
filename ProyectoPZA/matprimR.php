@@ -73,7 +73,7 @@
           <?php endforeach; ?>
           </tbody>
         </table>
-        <a href="menumatprim.php" class="btn btn-primary">Regresar</a> 
+        <a href="menu.php" class="btn btn-primary">Regresar</a> 
       </div>
     </div>
 </body>

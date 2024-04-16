@@ -94,7 +94,7 @@
           <?php endforeach; ?>
         </tbody>
       </table>
-      <a href="menuprove.php" class="btn btn-primary">Regresar</a>
+      <a href="menu.php" class="btn btn-primary">Regresar</a>
     </div>
    </div>
   </div>

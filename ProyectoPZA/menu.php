@@ -26,7 +26,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Materias primas</h5>
                   <p class="card-text">Acceder a la base de datos de materias primas</p>
-                  <a href="menumatprim.php" class="btn btn-primary">Acceder</a>
+                  <a href="matprimR.php" class="btn btn-primary">Acceder</a>
                 </div>
               </div>
             </div>
@@ -35,7 +35,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Productos terminados</h5>
                   <p class="card-text">Acceder a la base de datos de productos terminados</p>
-                  <a href="menuprodterm.php" class="btn btn-primary">Acceder</a>
+                  <a href="prodtermR.php" class="btn btn-primary">Acceder</a>
                 </div>
               </div>
             </div>
@@ -44,7 +44,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Clientes</h5>
                     <p class="card-text">Acceder a la base de datos de clientes</p>
-                    <a href="menuclientes.php" class="btn btn-primary">Acceder</a>
+                    <a href="clienteR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
               </div>
@@ -53,7 +53,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Proveedores</h5>
                     <p class="card-text">Acceder a la base de datos de proveedores</p>
-                    <a href="menuprove.php" class="btn btn-primary">Acceder</a>
+                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
               </div>
