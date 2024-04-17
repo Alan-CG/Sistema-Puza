@@ -15,7 +15,7 @@
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style_general.css">
-  <title>Materias primas</title>
+  <title>Proveedores</title>
 </head>
 
 <body>
@@ -28,76 +28,80 @@
       </div>
     </div>
   </header>
- <div class="container">
-  <h3 class="text-center">Lista de Proveedores</h3>
-  <a class="btn btn-primary" href="proveedoresC.php" >Registrar Nuevo Proveedor</a>
-  <br>
-  <br>
-  <div class="row w-100 align-items-center">
-    <div class="col text-center">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">RFC</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Representante</th>
-            <th scope="col">Teléfono</th>
-            <th scope="col">Correo</th>
-            <th scope="col">Calle</th>
-            <th scope="col">Colonia</th>
-            <th scope="col">Código Postal</th>
-            <th scope="col">Estado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php foreach ($miConsulta as $clave => $valor): ?>
-          <tr>
-            <td>
-              <?= $valor['IDproveedor']; ?>
-            </td>
-            <td>
-              <?= $valor['RFC_proveedor']; ?>
-            </td>
-            <td>
-              <?= $valor['NombreProveedor']; ?>
-            </td>
-            <td>
-              <?= $valor['Nombre_representante']; ?>
-            </td>
-            <td>
-              <?= $valor['TelefonoProveedor']; ?>
-            </td>
-            <td>
-              <?= $valor['CorreoProveedor']; ?>
-            </td>
-            <td>
-              <?= $valor['CalleProveedor']; ?>
-            </td>
-            <td>
-              <?= $valor['ColoniaProveedor']; ?>
-            </td>
-            <td>
-              <?= $valor['CodigopostalProveedor']; ?>
-            <td>
-              <?= $valor['Estado']; ?>
-            </td>
-            </td>
-            <td>
-              <a class="btn btn-primary" href="proveedoresU.php?IDproveedor=<?= $valor['IDproveedor'] ?>">Modificar</a>
-            </td>
-            <td>
-              <a class="btn btn-primary"
-                href="model/borrarprovebd.php?IDproveedor=<?= $valor['IDproveedor'] ?>">Eliminar</a>
-            </td>
-          </tr>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
-      <a href="menu.php" class="btn btn-primary">Regresar</a>
-    </div>
-   </div>
+  <div class="container">
+    <h3 class="text-center">Lista de Proveedores</h3>
+     <a class="btn btn-primary" href="proveedoresC.php" >Registrar Nuevo Proveedor</a>
+     <br>
+     <br>
+     <div class="row w-100 align-items-center">
+       <div class="table-responsive">
+         <table class="table table-bordered table-striped">
+           <thead>
+             <tr>
+               <th hidden scope="col">ID</th>
+               <th scope="col">RFC</th>
+               <th scope="col">Nombre</th>
+               <th scope="col">Representante</th>
+               <th scope="col">Teléfono</th>
+               <th scope="col">Correo</th>
+               <th scope="col">Calle</th>
+               <th scope="col">Colonia</th>
+               <th scope="col">Código Postal</th>
+               <th scope="col">Estado</th>
+               <th scope="col"></th>
+               <th scope="col"></th>
+             </tr>
+           </thead>
+           <tbody>
+             <?php foreach ($miConsulta as $clave => $valor): ?>
+             <tr>
+               <td hidden>
+                 <?= $valor['IDproveedor']; ?>
+               </td>
+               <td>
+                 <?= $valor['RFC_proveedor']; ?>
+               </td>
+               <td>
+                 <?= $valor['NombreProveedor']; ?>
+               </td>
+               <td>
+                 <?= $valor['Nombre_representante']; ?>
+               </td>
+               <td>
+                 <?= $valor['TelefonoProveedor']; ?>
+               </td>
+               <td>
+                 <?= $valor['CorreoProveedor']; ?>
+               </td>
+               <td>
+                 <?= $valor['CalleProveedor']; ?>
+               </td>
+               <td>
+                 <?= $valor['ColoniaProveedor']; ?>
+               </td>
+               <td>
+                 <?= $valor['CodigopostalProveedor']; ?>
+               <td>
+                 <?= $valor['Estado']; ?>
+               </td>
+               </td>
+               <td>
+                 <a class="btn btn-primary" href="proveedoresU.php?IDproveedor=<?= $valor['IDproveedor'] ?>">Modificar</a>
+               </td>
+               <td>
+                 <a class="btn btn-primary"
+                   href="model/borrarprovebd.php?IDproveedor=<?= $valor['IDproveedor'] ?>">Eliminar</a>
+               </td>
+             </tr>
+             <?php endforeach; ?>
+           </tbody>
+         </table>
+         <a href="menu.php" class="btn btn-primary">Regresar</a>
+       </div>
+      </div>
   </div>
+
+
 </body>
 
 </html>

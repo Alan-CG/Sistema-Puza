@@ -66,19 +66,19 @@
         <div id="campo_razonsocial" class="form-group col-md-6 esconder">
           <label for="input_razonsocial">Razón Social</label>
           <input type="text" class="form-control" id="input_razonsocial" name="input_razonsocial"
-            placeholder="Razón social del proveedor">
+            placeholder="Razón social del proveedor" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div>
         </div>
         <div id="campo_nombreproveedor" class="form-group col-md-6 esconder">
           <label for="input_nombreproveedor">Nombre</label>
           <input type="text" class="form-control" id="input_nombreproveedor" name="input_nombreproveedor"
-            placeholder="Nombre del proveedor" >
+            placeholder="Nombre del proveedor" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div>
         </div>
         <div  id="campo_representprove" class="form-group col-md-6 esconder">
           <label for="input_representprove">Representante</label>
           <input type="text" class="form-control" id="input_representprove" name="input_representprove"
-            placeholder="Nombre del representante del proveedor">
+            placeholder="Nombre del representante del proveedor" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div>
         </div>
         <div class="form-group col-md-6">
