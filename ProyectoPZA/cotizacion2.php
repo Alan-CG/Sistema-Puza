@@ -1,4 +1,3 @@
-
 <?php include 'model/consultacotiza.php' ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
+    <script src="cotizaselects.js"></script>
     <link rel="stylesheet" href="css/style_general.css">
     <title>Cotización de producto</title>
 </head>
@@ -30,7 +30,7 @@
     <div class="container">
         <h4 class="text-center">Cotización de pedidos</h4>
         <br>
-        <form action="" method="POST" class="needs-validation" novalidate>
+        <form action="" method="post" class="needs-validation" novalidate>
             <h5 class="text-align-left">Datos para cotizar</h5>
             <div class="form-row">
                 <div class="col-md-6">
@@ -42,9 +42,10 @@
                     </select>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label for="segundo_select">Precio unitario:</label>
-                    <select class="form-control" id="precio_producto" name="precio_producto">
+                    <select class="form-control" id="segundo_select" name="input_precio">
+                        <option value="">Seleccione una opción</option>
                     </select>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
@@ -64,18 +65,16 @@
         <br>
         <div class="form-row">
             <div class="col-md-4">
-                <label for="resultado">Total:</label>
+                <label for="resultado">TOTAL:</label>
                 <input  id="resultado" class="form-control">
             </div>
         </div>
-
-        <script src="js/peticiones_cotiza.js"></script>
 </body>
 
 <script type="text/javascript">
     function cotizar(){
         try{
-            var a =parseFloat(document.getElementById("precio_producto").value) || 0,
+            var a =parseFloat(document.getElementById("precioUnidad").value) || 0,
                 b =parseFloat(document.getElementById("cantidadproducto").value) || 0;
             document.getElementById("resultado").value=a*b;
         }catch(e){}

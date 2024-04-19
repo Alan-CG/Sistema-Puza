@@ -135,6 +135,7 @@
     </script>
 
     <script>
+        //El siguiente script se encarga de clonar los campos
         let agregar = document.getElementById('agregar');
         let contenido=document.getElementById('contenedor');
 
