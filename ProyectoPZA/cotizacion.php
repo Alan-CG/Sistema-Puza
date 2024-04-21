@@ -42,10 +42,12 @@
                     </select>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-2">
                     <label for="segundo_select">Precio unitario:</label>
-                    <select class="form-control" id="precio_producto" name="precio_producto">
-                    </select>
+                    <input value="" class="form-control" type="number" id="precio_producto" name="precio_producto" required>
+                    <!--<select class="form-control" id="precio_producto" name="precio_producto">
+                    </select>-->
+                    
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
                 <div class="col-md-6">

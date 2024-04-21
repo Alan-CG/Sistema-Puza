@@ -62,7 +62,7 @@
         <div class="form-group col-md-6">
           <label for="input_precio">Precio</label>
           <input type="number" class="form-control" id="input_precio" name="input_precio"
-            value="<?= $matprim['PrecioMateria'] ?>" required>
+            value="<?= $matprim['CostoMateria'] ?>" required>
             <div class="invalid-feedback">
         Rellena el campo correctamente
       </div>

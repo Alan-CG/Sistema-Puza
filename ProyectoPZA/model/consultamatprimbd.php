@@ -9,9 +9,9 @@ $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
 $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 $conexion=mysqli_connect($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB) or die(mysqli_error($conexion));
 // Prepara SELECT
-$miConsulta = $miPDO->prepare('SELECT materias_primas.*,proveedores.NombreProveedor 
+$miConsulta = $miPDO->prepare('SELECT materias_primas.*,proveedores.Razon_social_nombre 
 FROM materias_primas INNER JOIN proveedores ON materias_primas.IDproveedor = proveedores.IDproveedor
-WHERE materias_primas.EstadoMateria = 1;');
+WHERE materias_primas.EstadoMateria = 1 ORDER BY NombreMateria AND Razon_social_nombre ASC;');
 // Ejecuta consulta
 $miConsulta->execute();
 //Las siguientes dos lineas sirven para llenar el select de estados en registro de proveedores

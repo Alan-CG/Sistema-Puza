@@ -18,15 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
     // Prepara INSERT
     $miInsert = $miPDO->prepare('INSERT INTO materias_primas (NombreMateria, DescripcionMateria, 
-    IDproveedor, PrecioMateria, ExistenciasMateria, Fecha_entradaMateria, EstadoMateria) 
-    VALUES (:NombreMateria,:DescripcionMateria,:IDproveedor,:PrecioMateria,:ExistenciasMateria,:Fecha_entradaMateria,:EstadoMateria)');
+    IDproveedor, CostoMateria, ExistenciasMateria, Fecha_entradaMateria, EstadoMateria) 
+    VALUES (:NombreMateria,:DescripcionMateria,:IDproveedor,:CostoMateria,:ExistenciasMateria,:Fecha_entradaMateria,:EstadoMateria)');
     // Ejecuta INSERT con los datos
     $miInsert->execute(
         array(
             'NombreMateria' => $nombre,
             'DescripcionMateria' => $descripcion,
             'IDproveedor'=> $proveedor,
-            'PrecioMateria'=> $precio,
+            'CostoMateria'=> $precio,
             'ExistenciasMateria'=> $cantidad,
             'Fecha_entradaMateria'=> $fechaentrada,
             'EstadoMateria' => 1

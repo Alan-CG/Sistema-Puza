@@ -13,3 +13,4 @@ while($row=$resultado->fetch_assoc()){
 }
 
 echo json_encode($respuesta,JSON_UNESCAPED_UNICODE);
+

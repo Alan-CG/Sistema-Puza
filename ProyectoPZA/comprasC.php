@@ -71,7 +71,8 @@
         </div>
         <div class="form-group col-sm-2">
           <label for="input_costo">Costo</label>
-          <input type="number" class="form-control" id="input_costo" name="input_costo"></input>
+          <select class="form-control" id="input_costo" name="input_costo[]">
+          </select>
         </div>
         <div class="form-group col-sm-2">
           <label for="input_cantidad">Cantidad a comprar</label>

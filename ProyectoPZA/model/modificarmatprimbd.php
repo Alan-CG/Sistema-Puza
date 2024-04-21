@@ -8,7 +8,7 @@ $codigo = isset($_REQUEST['IDmateriaprima']) ? $_REQUEST['IDmateriaprima'] : nul
 $nombre = isset($_REQUEST['input_nombremp']) ? $_REQUEST['input_nombremp'] : null;
 $descripcion = isset($_REQUEST['input_descripcionmp']) ? $_REQUEST['input_descripcionmp'] : null;
 $proveedor = isset($_REQUEST['input_proveedor']) ? $_REQUEST['input_proveedor'] : null;
-$precio = isset($_REQUEST['input_precio']) ? $_REQUEST['input_precio'] : null;
+$costo = isset($_REQUEST['input_precio']) ? $_REQUEST['input_precio'] : null;
 $cantidad = isset($_REQUEST['input_cantidad']) ? $_REQUEST['input_cantidad'] : null;
 $fechaentrada = isset($_REQUEST['input_fentrada']) ? $_REQUEST['input_fentrada'] : null;
 // Conecta con base de datos
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepara UPDATE
     $miUpdate = $miPDO->prepare('UPDATE materias_primas 
     SET NombreMateria = :NombreMateria, DescripcionMateria = :DescripcionMateria, 
-    IDproveedor = :IDproveedor, PrecioMateria = :PrecioMateria, ExistenciasMateria = :ExistenciasMateria,
+    IDproveedor = :IDproveedor, CostoMateria = :CostoMateria, ExistenciasMateria = :ExistenciasMateria,
     Fecha_entradaMateria = :Fecha_entradaMateria WHERE IDmateriaprima = :IDmateriaprima');
     // Ejecuta UPDATE con los datos
     $miUpdate->execute(
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'NombreMateria' => $nombre,
             'DescripcionMateria' => $descripcion,
             'IDproveedor' => $proveedor,
-            'PrecioMateria' => $precio,
+            'CostoMateria' => $costo,
             'ExistenciasMateria'=> $cantidad,
             'Fecha_entradaMateria'=> $fechaentrada
 
