@@ -1,3 +1,5 @@
+<!-- Realziar cambios -->
+
 <?php include 'model/altaclientebd.php' ?>
 <?php include 'model/consultaclientebd.php' ?>
 <!DOCTYPE html>
@@ -122,22 +124,20 @@
             placeholder="Número exterior de la dirección" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="input_clientcolonia">Colonia</label>
-          <input type="text" class="form-control" id="input_clientcolonia" name="input_clientcolonia"
-            placeholder="Nombre de la colonia" required>
-          <div class="invalid-feedback">Rellena el campo correctamente</div>
+          <div class="form-group col-md-6">
+            <label for="input_clientcolonia">Colonia</label>
+            <input type="text" class="form-control" id="input_clientcolonia" name="input_clientcolonia"
+              placeholder="Nombre de la colonia" required>
+            <div class="invalid-feedback">Rellena el campo correctamente</div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="input_clientcp">Código Postal</label>
+            <input type="number" class="form-control" id="input_clientcp" name="input_clientcp"
+              placeholder="Introduce el código postal" required>
+            <div class="invalid-feedback">Rellena el campo correctamente</div>
+          </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="input_clientcp">Código Postal</label>
-          <input type="number" class="form-control" id="input_clientcp" name="input_clientcp"
-            placeholder="Introduce el código postal" required>
-          <div class="invalid-feedback">Rellena el campo correctamente</div>
-        </div>
-      </div>
-      <div class="form-row">
-        <input type="submit" class="btn btn-primary" name="submit">
-      </div>
+      <button type="submit" class="btn btn-primary">Registrar</button>
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">

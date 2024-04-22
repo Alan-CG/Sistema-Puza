@@ -1,3 +1,5 @@
+<!-- revisar cambios -->
+
 <?php include 'model/altamatprimbd.php' ?>
 <?php include 'model/consultamatprimbd.php' ?>
 <!DOCTYPE html>

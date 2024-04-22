@@ -1,5 +1,5 @@
 
-<?php include 'model/altaprovebd.php' ?>
+<?php include 'model/altaproveedor.php' ?>
 <?php include 'model/consultaprovebd.php'?>
 <!DOCTYPE html>
 <html lang="en">
