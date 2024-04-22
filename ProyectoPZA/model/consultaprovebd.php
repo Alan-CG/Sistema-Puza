@@ -12,7 +12,7 @@ $conexion=mysqli_connect($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB) or die(mys
 //$miConsulta = $miPDO->prepare('SELECT * FROM proveedores;');
 $miConsulta = $miPDO->prepare('SELECT proveedores.*, estados.Estado 
 FROM proveedores INNER JOIN estados ON proveedores.IDestado = estados.ID_estado 
-WHERE proveedores.estadoProveedor=1;');
+WHERE proveedores.estadoProveedor=1 ORDER BY Razon_social_nombre ASC;');
 
 // Ejecuta consulta
 $miConsulta->execute();

@@ -38,7 +38,7 @@
               <a class="dropdown-item" href="matprimR.php">Materias primas</a>
               <a class="dropdown-item" href="clienteR.php">Clientes</a>
               <a class="dropdown-item" href="proveedoresR.php">Proveedores</a>
-              <a class="dropdown-item" href="">Productos</a>
+              <a class="dropdown-item" href="productosR.php">Productos</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -70,10 +70,12 @@
                 <th scope="col">Representante Legal</th>
                 <th scope="col">Teléfono</th>
                 <th scope="col">Correo</th>
-                <th scope="col">Calle</th>
-                <th scope="col">Colonia</th>
-                <th scope="col">Código Postal</th>
                 <th scope="col">Estado</th>
+                <th scope="col">Municipio</th>
+                <th scope="col">Colonia</th>
+                <th scope="col">Calle</th>
+                <th scope="col">Número Exterior</th>
+                <th scope="col">Código Postal</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
               </tr>
@@ -100,16 +102,21 @@
                   <?= $valor['CorreoProveedor']; ?>
                 </td>
                 <td>
-                  <?= $valor['CalleProveedor']; ?>
+                  <?= $valor['Estado']; ?>
+                </td>
+                <td>
+                  <?= $valor['Municipio']; ?>
                 </td>
                 <td>
                   <?= $valor['ColoniaProveedor']; ?>
                 </td>
                 <td>
-                  <?= $valor['CodigopostalProveedor']; ?>
+                  <?= $valor['CalleProveedor']; ?>
                 <td>
-                  <?= $valor['Estado']; ?>
+                  <?= $valor['Num_exterior']; ?>
                 </td>
+                <td>
+                  <?= $valor['CodigopostalProveedor']; ?>
                 </td>
                 <td>
                   <a class="btn btn-primary bi bi-pencil-square" href="proveedoresU.php?IDproveedor=<?= $valor['IDproveedor'] ?>"></a>

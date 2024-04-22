@@ -55,7 +55,7 @@
           <select class="custom-select" id="input_proveedor" name="input_proveedor">
             <?php foreach ($ejecutar as $opciones): ?>
               <option value="<?php echo $opciones['IDproveedor'] ?>">
-                <?php echo $opciones['NombreProveedor'] ?>
+                <?php echo $opciones['Razon_social_nombre'] ?>
               </option>
             <?php endforeach ?>
           </select>

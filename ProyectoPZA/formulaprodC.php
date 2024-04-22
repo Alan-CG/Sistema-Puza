@@ -98,7 +98,7 @@
         </form>
         <div class="row w-100 align-items-center">
             <div class="col text-center">
-                <a href="" class="btn btn-primary">Regresar</a>
+                <a href="productosR.php" class="btn btn-primary">Regresar</a>
             </div>
         </div>
     </div>

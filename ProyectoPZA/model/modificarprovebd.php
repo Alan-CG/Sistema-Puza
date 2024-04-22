@@ -11,8 +11,10 @@ $nombre_represent = isset($_REQUEST['input_representprove']) ? $_REQUEST['input_
 $telefono = isset($_REQUEST['input_telefonoprove']) ? $_REQUEST['input_telefonoprove'] : null;
 $correo = isset($_REQUEST['input_correoprove']) ? $_REQUEST['input_correoprove'] : null;
 $estado = isset($_REQUEST['input_proveestado']) ? $_REQUEST['input_proveestado'] : null;
-$calle = isset($_REQUEST['input_provecalle']) ? $_REQUEST['input_provecalle'] : null;
+$municipio = isset($_REQUEST['input_ciudad']) ? $_REQUEST['input_ciudad'] : null;
 $colonia = isset($_REQUEST['input_provecolonia']) ? $_REQUEST['input_provecolonia'] : null;
+$calle = isset($_REQUEST['input_provecalle']) ? $_REQUEST['input_provecalle'] : null;
+$num_ext = isset($_REQUEST['input_provenumex']) ? $_REQUEST['input_provenumex'] : null;
 $codigopostal = isset($_REQUEST['input_provecp']) ? $_REQUEST['input_provecp'] : null;
 
 // Conecta con base de datos
@@ -23,23 +25,25 @@ $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepara UPDATE
     $miUpdate = $miPDO->prepare('UPDATE proveedores 
-    SET RFC_proveedor=:RFC_proveedor,NombreProveedor = :NombreProveedor, Nombre_representante = :Nombre_representante, 
+    SET RFC_proveedor=:RFC_proveedor,Razon_social_nombre = :Razon_social_nombre, Nombre_representante = :Nombre_representante, 
     TelefonoProveedor = :TelefonoProveedor, CorreoProveedor = :CorreoProveedor, CalleProveedor = :CalleProveedor,
-    ColoniaProveedor = :ColoniaProveedor, CodigopostalProveedor = :CodigopostalProveedor, IDestado = :IDestado
-     WHERE IDproveedor = :IDproveedor');
+    Num_exterior=:Num_exterior,ColoniaProveedor = :ColoniaProveedor, CodigopostalProveedor = :CodigopostalProveedor, IDestado = :IDestado,
+     EstadoProveedor=:EstadoProveedor WHERE IDproveedor = :IDproveedor');
     // Ejecuta UPDATE con los datos
     $miUpdate->execute(
         [
             'IDproveedor' => $codigo,
             'RFC_proveedor'=>$RFC,
-            'NombreProveedor' => $nombre,
+            'Razon_social_nombre' => $nombre,
             'Nombre_representante' => $nombre_represent,
             'TelefonoProveedor' => $telefono,
             'CorreoProveedor' => $correo,
             'CalleProveedor'=> $calle,
+            'Num_exterior'=>$num_ext,
             'ColoniaProveedor'=> $colonia,
             'CodigopostalProveedor'=> $codigopostal,
-            'IDestado'=> $estado
+            'IDestado'=> $estado,
+            'EstadoProveedor'=>1
         ]
     );
     // Redireccionamos a Leer
