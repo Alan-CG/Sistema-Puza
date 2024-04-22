@@ -30,7 +30,7 @@
               <a class="dropdown-item" href="matprimR.php">Materias primas</a>
               <a class="dropdown-item" href="clienteR.php">Clientes</a>
               <a class="dropdown-item" href="proveedoresR.php">Proveedores</a>
-              <a class="dropdown-item" href="">Productos</a>
+              <a class="dropdown-item" href="productosR.php">Productos</a>
             </div>
           </li>
           <li class="nav-item dropdown">
