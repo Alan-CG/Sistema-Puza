@@ -1,0 +1,30 @@
+.jumbotron {
+    padding-top:20px ;
+    padding-bottom:20px ;
+    height: 140px;
+    margin-bottom:0px;
+    text-align: center;
+    text-shadow: black;
+    background-color: #FB5805;
+    color: aliceblue;
+}
+
+.nav{
+    margin-bottom: 20px;
+    background-color: #FB5805;
+
+}
+
+.nav-link{
+    color:aliceblue;
+}
+
+
+.btn{
+background-color: #FB5805;
+border-color: #FB5805;
+}
+
+.card{
+    margin-bottom: 10px;
+}
