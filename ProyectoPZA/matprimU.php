@@ -54,7 +54,7 @@
           <label for="input_proveedor">Proveedor</label>
           <select class="custom-select" id="input_proveedor" name="input_proveedor">
             <?php foreach ($ejecutar as $opciones): ?>
-              <option value="<?php echo $opciones['IDproveedor'] ?>"><?php echo $opciones['NombreProveedor'] ?>
+              <option value="<?php echo $opciones['IDproveedor'] ?>"><?php echo $opciones['Razon_social_nombre'] ?>
               </option>
             <?php endforeach ?>
           </select>
@@ -89,7 +89,7 @@
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">
-        <a href="menumatprim.php" class="btn btn-primary">Regresar</a>
+        <a href="matprimR.php" class="btn btn-primary">Regresar</a>
       </div>
     </div>
   </div>

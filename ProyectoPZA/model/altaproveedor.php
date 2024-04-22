@@ -35,19 +35,18 @@
     $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
     $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 
-    if($RFC12!=''){
+    if($RFC12!='000000000000'){
          // Prepara INSERT
-    $miInsert = $miPDO->prepare('INSERT INTO proveedores (RFC_proveedor,Razon_social,NombreProveedor, Nombre_representante, 
+    $miInsert = $miPDO->prepare('INSERT INTO proveedores (RFC_proveedor,Razon_social_nombre,Nombre_representante, 
     TelefonoProveedor, CorreoProveedor, CalleProveedor, Num_exterior,ColoniaProveedor, CodigopostalProveedor,
     IDestado,EstadoProveedor,Municipio) 
-    VALUES (:RFC_proveedor,:Razon_social,:NombreProveedor,:Nombre_representante,:TelefonoProveedor,:CorreoProveedor,
+    VALUES (:RFC_proveedor,:Razon_social_nombre,:Nombre_representante,:TelefonoProveedor,:CorreoProveedor,
     :CalleProveedor,:Num_exterior,:ColoniaProveedor,:CodigopostalProveedor,:IDestado,:EstadoProveedor,:Municipio)');
     // Ejecuta INSERT con los datos
     $miInsert->execute(
         array(
             'RFC_proveedor'=>$RFC12,
-            'Razon_social'=>$razon_social,
-            'NombreProveedor' => $nombre,
+            'Razon_social_nombre'=>$razon_social,
             'Nombre_representante' => $representante,
             'TelefonoProveedor' => $telefono,
             'CorreoProveedor'=> $correo,
@@ -60,8 +59,29 @@
             'Municipio'=>$municipio
         )
     );
-
-
+    }else{
+        $miInsert = $miPDO->prepare('INSERT INTO proveedores (RFC_proveedor,Razon_social_nombre,Nombre_representante, 
+    TelefonoProveedor, CorreoProveedor, CalleProveedor, Num_exterior,ColoniaProveedor, CodigopostalProveedor,
+    IDestado,EstadoProveedor,Municipio) 
+    VALUES (:RFC_proveedor,:Razon_social_nombre,:Nombre_representante,:TelefonoProveedor,:CorreoProveedor,
+    :CalleProveedor,:Num_exterior,:ColoniaProveedor,:CodigopostalProveedor,:IDestado,:EstadoProveedor,:Municipio)');
+    // Ejecuta INSERT con los datos
+    $miInsert->execute(
+        array(
+            'RFC_proveedor'=>$RFC13,
+            'Razon_social_nombre'=>$nombre,
+            'Nombre_representante' => $representante,
+            'TelefonoProveedor' => $telefono,
+            'CorreoProveedor'=> $correo,
+            'CalleProveedor'=> $calle,
+            'Num_exterior'=>$num_ext,
+            'ColoniaProveedor'=> $colonia,
+            'CodigopostalProveedor'=> $cp,
+            'IDestado'=> $estado,
+            'EstadoProveedor' => 1,
+            'Municipio'=>$municipio
+        )
+    );
     }
 
 

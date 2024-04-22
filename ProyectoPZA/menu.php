@@ -33,9 +33,9 @@
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Productos terminados</h5>
-                  <p class="card-text">Acceder a la base de datos de productos terminados</p>
-                  <a href="prodtermR.php" class="btn btn-primary">Acceder</a>
+                  <h5 class="card-title">Productos</h5>
+                  <p class="card-text">Acceder a los registros de datos de productos</p>
+                  <a href="productosR.php" class="btn btn-primary">Acceder</a>
                 </div>
               </div>
             </div>

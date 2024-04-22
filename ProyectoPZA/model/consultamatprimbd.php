@@ -11,7 +11,7 @@ $conexion=mysqli_connect($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB) or die(mys
 // Prepara SELECT
 $miConsulta = $miPDO->prepare('SELECT materias_primas.*,proveedores.Razon_social_nombre 
 FROM materias_primas INNER JOIN proveedores ON materias_primas.IDproveedor = proveedores.IDproveedor
-WHERE materias_primas.EstadoMateria = 1 ORDER BY NombreMateria AND Razon_social_nombre ASC;');
+WHERE materias_primas.EstadoMateria = 1 ORDER BY IDproveedor ASC;');
 // Ejecuta consulta
 $miConsulta->execute();
 //Las siguientes dos lineas sirven para llenar el select de estados en registro de proveedores
