@@ -15,16 +15,24 @@ $codigo = isset($_REQUEST['IDproducto']) ? $_REQUEST['IDproducto'] : null;
 //FROM materias_primas INNER JOIN proveedores ON materias_primas.IDproveedor = proveedores.IDproveedor
 //WHERE materias_primas.EstadoMateria = 1 ORDER BY IDproveedor ASC;');
 
-$miConsulta = $miPDO->prepare('SELECT * FROM productos WHERE EstadoProducto = 1');
+$miConsulta = $miPDO->prepare('SELECT formula_producto.*,productos.NombreProducto,materias_primas.NombreMateria FROM 
+formula_producto 
+INNER JOIN productos ON formula_producto.ID_Producto = productos.IDproducto 
+INNER JOIN materias_primas ON formula_producto.ID_Materia=materias_primas.IDmateriaprima 
+WHERE ID_Producto=:ID_producto;');
 
 // Ejecuta consulta
-$miConsulta->execute();
-
-
-$miConsulta2 = $miPDO->prepare('SELECT * FROM productos WHERE IDproducto = :IDproducto');
-$miConsulta2->execute(
-    [
-        'IDproducto' => $codigo
-    ]
+$miConsulta->execute(
+    array(
+        'ID_producto'=>$codigo
+    )
 );
-$producto = $miConsulta2->fetch();
+
+
+//$miConsulta2 = $miPDO->prepare('SELECT * FROM productos WHERE IDproducto = :IDproducto');
+//$miConsulta2->execute(
+//    [
+//        'IDproducto' => $codigo
+//    ]
+//);
+//$producto = $miConsulta2->fetch();

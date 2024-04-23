@@ -1,4 +1,4 @@
-<?php include 'model/consultaproductos.php' ?>
+<?php include 'model/consulta_productos_mat.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,64 +50,43 @@
               <a class="dropdown-item" href="#">Cotización</a>
             </div>
           </li>
-        </nav>
+    </nav>
   </header>
   <div class="container">
-    <h3 class="text-center">Lista de Productos</h3>
-    <div class="form-row">
-      <div class="form-group col">
-         <a href="formulaprodC.php" class="btn btn-success">Crear Nuevo Producto</a> 
-      </div>
-    </div>
-     <div class="row w-100 align-items-center ">
-        <div class="col text-center">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th hidden scope="col">ID</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Costo</th>
-                <th scope="col">Precio de venta</th>
-                <th scope="col">Materiales</th>
-                <th scope="col">Modificar</th>
-                <th scope="col">Eliminar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach ($miConsulta as $clave => $valor): ?>
-              <tr>
-                <td hidden>
-                  <?= $valor['IDproducto']; ?>
-                </td>
-                <td>
-                  <?= $valor['NombreProducto']; ?>
-                </td>
-                <td>
-                  <?= $valor['DescripcionProducto']; ?>
-                </td>
-                <td>
-                  <?= $valor['PrecioCosto']; ?>
-                </td>
-                <td>
-                  <?= $valor['PrecioProducto']; ?>
-                </td>
-                <td>
-                  <a class="btn btn-primary bi bi-plus-square" href="productos_matR.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
-                </td>
-                <td>
-                  <a class="btn btn-primary bi bi-pencil-square" href="productosU.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
-                </td>
-                <td>
-                  <a class="btn btn-danger bi bi-trash3-fill" href="model/borrarprodbd.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
-                </td>
-              </tr>
-              <?php endforeach; ?>
-            </tbody>
-          </table>
-          <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
+    <h3 class="text-center">Lista de Materias Primas</h3>
+      <div class="form-row">
+        <div class="form-group col">
+           <a href="formulaprodC.php" class="btn btn-success">Crear Nuevo Producto</a> 
         </div>
       </div>
+       <div class="row w-100 align-items-center ">
+          <div class="col text-center">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                    <th scope="col">ID Formula</th>
+                    <th scope="col">ID Materia</th>
+                    <th scope="col">ID Producto</th>
+                    <th scope="col">Cantidad Insumo</th>
+                    <th scope="col">Nombre Producto</th>
+                    <th scope="col">Nombre Materia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($miConsulta as $clave => $dato): ?>
+                 <tr>
+                     <td><?=$dato['ID_Formula'] ?></td>
+                     <td><?=$dato['ID_Materia'] ?></td>
+                     <td><?=$dato['ID_Producto'] ?></td>
+                     <td><?=$dato['Cantidad_insumo'] ?></td>
+                     <td><?=$dato['NombreProducto'] ?></td>
+                     <td><?=$dato['NombreMateria'] ?></td>
+                 </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          <a href="productosR.php" class="btn btn-primary bi bi-arrow-return-left"></a>
+        </div>
   </div>
 
 
