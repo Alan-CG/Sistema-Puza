@@ -13,4 +13,4 @@ if($mysqli->connect_error){
     exit;
 }
 
-$consulta = $mysqli->query("SELECT IDproveedor,NombreProveedor FROM proveedores");
+$consulta = $mysqli->query("SELECT IDproveedor,Razon_social_nombre FROM proveedores");

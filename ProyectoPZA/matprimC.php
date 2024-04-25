@@ -28,11 +28,12 @@
       </div>
     </div>
   </header>
+  <br>
   <div class="container">
-    <h4 class="text-center">Registro de entradas</h4>
-    <form action="" method="post" class="needs-validation" novalidate>
+    <h4 class="text-center">Registro de Materia Prima</h4>
+    <form action="" method="POST" class="needs-validation" novalidate>
       <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
           <label for="input_nombremp">Nombre</label>
           <input type="text" class="form-control" id="input_nombremp" placeholder="Nombre de la materia prima"
             name="input_nombremp" required>
@@ -50,7 +51,7 @@
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
           <label for="input_proveedor">Proveedor</label>
           <select class="custom-select" id="input_proveedor" name="input_proveedor">
             <?php foreach ($ejecutar as $opciones): ?>
@@ -60,21 +61,21 @@
             <?php endforeach ?>
           </select>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-sm-2">
           <label for="input_precio">Precio</label>
           <input type="number" class="form-control" id="input_precio" name="input_precio" required>
           <div class="invalid-feedback">
             Rellena el campo correctamente
           </div>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-sm-2">
           <label for="input_cantidad">Cantidad</label>
           <input type="number" class="form-control" id="input_cantidad" name="input_cantidad" required>
           <div class="invalid-feedback">
             Rellena el campo correctamente
           </div>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-sm-2">
           <label for="input_fentrada">Fecha de entrada</label>
           <input type="date" class="form-control" id="input_fentrada" name="input_fentrada" required>
           <div class="invalid-feedback">
@@ -82,7 +83,7 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Actualizar la base de datos</button>
+      <button type="submit" class="btn btn-primary">Registrar</button>
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">

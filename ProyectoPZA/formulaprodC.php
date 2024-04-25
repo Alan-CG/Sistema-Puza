@@ -44,17 +44,17 @@
         <form action="model/altaproductos.php" method="POST" class="needs-validation" novalidate>
             <h5 class="text-align-left">Datos básicos del producto</h5>
             <div class="form-row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label for="input_nombreprod">Nombre del producto</label>
                     <input type="text" class="form-control" id="input_nombreprod" placeholder="Nombre del nuevo producto" name="input_nombreclient" required>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <label for="input_desprod">Descripción</label>
-                    <input type="text" class="form-control" id="input_desprod" placeholder="Nombre del nuevo producto" name="input_desprod" required>
+                    <input type="text" class="form-control" id="input_desprod" placeholder="Descripción del producto" name="input_desprod" required>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-2">
                     <label for="input_ganancia">Utilidad</label>
                     <input type="number" class="form-control" id="input_ganancia" placeholder="Introduce el porcentaje de ganancia" name="input_ganancia" required>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
@@ -73,7 +73,7 @@
             </div>
             <br> 
             <div class="form-row clonar">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="input_matprim">Materia Prima</label>
                     <select class="custom-select" id="input_matprim" name="input_matprim[]">
                      <?php foreach ($opciones_select as $opciones): ?>
@@ -82,7 +82,7 @@
                     </select>
                     <span class="badge badge-danger puntero ocultar">Eliminar</span>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-sm-2">
                     <label for="input_cantmat">Cantidad Necesaria</label>
                     <input type="number" class="form-control" id="input_cantmat" placeholder="Cantidad requerida para el producto" name="input_cantmat[]" required>
                     <div class="invalid-feedback">Rellena el campo correctamente</div>

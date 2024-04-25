@@ -45,7 +45,7 @@
           <label for="input_proveedor">Proveedor</label>
           <select class="form-control" id="input_proveedor" name="input_proveedor">
             <?php while ($row = $consulta ->fetch_assoc()) { ?>
-              <option value="<?php echo $row['IDproveedor'];?>"><?php echo $row['NombreProveedor'];?></option>
+              <option value="<?php echo $row['IDproveedor'];?>"><?php echo $row['Razon_social_nombre'];?></option>
           <?php } ?>
           </select>
         </div>
