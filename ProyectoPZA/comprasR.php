@@ -13,7 +13,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/style_general.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style><?php include "css/style_general.css" ?></style>
   <title>Compras</title>
 </head>
 
@@ -27,6 +28,7 @@
       </div>
     </div>
   </header>
+  <br>
   <div class="container">
     <h4 class="text-center">Compras</h4>
     <div class="form-row">
@@ -38,31 +40,34 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Materia prima</th>
-                    <th scope="col">Cantidad Comprada</th>
-                    <th scope="col">Fecha de compra</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th hidden scope="col">IDregistro</th>
+                    <th scope="col">Folio</th>
+                    <th scope="col">Proveedor</th>
+                    <th scope="col">Fecha de pedido</th>
+                    <th scope="col">Total de compra</th>
+                    <th scope="col">Detalles</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($miConsulta as $clave => $valor): ?>
             <tr>
-              <td>
-                <?= $valor['NombreMateria']; ?>
+              <td hidden>
+                <?= $valor['IDregistro_compra']; ?>
               </td>
               <td>
-                <?= $valor['Cantidad_Compra']; ?>
+                <?= $valor['Folio']; ?>
+              </td>
+              <td>
+                <?= $valor['Razon_social_nombre']; ?>
               </td>
               <td>
                 <?= $valor['Fecha_Entrada']; ?>
               </td>
-              <td>
-                <a class="btn btn-success" href="comprasU.php?ID_Compra=<?= $valor['ID_Compra'] ?>">Modificar</a>
+              <td>$
+                <?= $valor['Total_compra']; ?>
               </td>
               <td>
-                <a class="btn btn-danger"
-                  href="model/borrarcompra.php?ID_Compra=<?= $valor['ID_Compra'] ?>">Eliminar</a>
+                <a class="bi bi-plus-square btn btn-success" href="compras_matR.php?IDregistro_compra=<?= $valor['IDregistro_compra'] ?>"></a>
               </td>
             </tr>
           <?php endforeach; ?>

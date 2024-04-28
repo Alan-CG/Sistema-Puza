@@ -26,7 +26,7 @@
     .ocultar{
         display:none;
     }
-</style>
+  </style>
 
   <header>
     <div class="jumbotron jumbotron-fluid">
@@ -36,6 +36,7 @@
       </div>
     </div>
   </header>
+  <br>
   <div class="container">
     <h4 class="text-center">Registro de compra Materia Primas</h4>
     <form action="model/altacompra.php" method="POST" class="needs-validation" novalidate>
@@ -43,15 +44,19 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="input_proveedor">Proveedor</label>
-          <select class="form-control" id="input_proveedor" name="input_proveedor">
-            <?php while ($row = $consulta ->fetch_assoc()) { ?>
-              <option value="<?php echo $row['IDproveedor'];?>"><?php echo $row['Razon_social_nombre'];?></option>
-          <?php } ?>
+          <select class="form-control" id="input_proveedor" name="input_proveedor" onchange="updateSelect2()" required>
+           <?php foreach($consulta as $opciones):  ?>
+             <option value="<?php echo $opciones['IDproveedor'] ?>"><?php echo $opciones['Razon_social_nombre']?></option>
+           <?php endforeach ;?>
           </select>
         </div>
         <div class="form-group col-sm-2">
+          <label for="input_folio">Folio de compra</label>
+          <input type="text" class="form-control" id="input_folio" name="input_folio" required></input>
+        </div>
+        <div class="form-group col-sm-2">
           <label for="input_Fecha">Fecha de compra</label>
-          <input type="date" class="form-control" id="input_Fecha" name="input_Fecha"></input>
+          <input type="date" class="form-control" id="input_Fecha" name="input_Fecha" required></input>
         </div>
       </div>
       <br>
@@ -65,32 +70,19 @@
       <div class="form-row clonar">
         <div class="form-group col-sm-6">
           <label for="input_matprim">Materia Prima</label>
-          <select class="form-control" id="input_matprim" name="input_matprim[]">
+          <select class="form-control" id="input_matprim" name="input_matprim[]" required>
           </select>
           <span class="badge badge-danger puntero ocultar">Eliminar</span>
         </div>
         <div class="form-group col-sm-2">
-          <label for="input_costo">Costo</label>
-          <select class="form-control" id="input_costo" name="input_costo[]">
-          </select>
-        </div>
-        <div class="form-group col-sm-2">
-          <label for="input_cantidad">Cantidad a comprar</label>
-          <input type="number" class="form-control" id="input_cantidad" name="input_cantidad[]"></input>
-        </div>
-        <div class="form-group col-sm-2">
-          <label for="subtotal">Subtotal</label>
-          <input type="number" class="form-control" id="subtotal" name="subtotal"></input>
+          <label for="input_cantidad">Cantidad comprada</label>
+          <input type="number" class="form-control" id="input_cantidad" name="input_cantidad[]" required></input>
         </div>
       </div>
       <div id="contenedor"></div>
       <br>
       <div class="form-row">
         <div class="col-md-10"></div>
-        <div class="form-group col-sm-2">
-          <label for="totalcompra">Total de compra</label>
-          <span type="number" class="form-control" id="totalcompra" name="totalcompra"></span>
-        </div>
       </div>
       <div class="form-row">
         <button  type="submit" class="btn btn-primary">Registrar</button>
@@ -148,7 +140,7 @@
         });
   </script>
 
-  <script src="js/peticiones_compras.js"></script>
+  <script src="js/compras_select.js"></script>
 </body>
 
 </html>
