@@ -22,3 +22,9 @@ if($mysqli->connect_error){
 }
 
 $consulta = $mysqli->query("SELECT IDproveedor,Razon_social_nombre FROM proveedores");
+
+$miConsulta2 = $miPDO->prepare('SELECT registro_compra.*,proveedores.Razon_social_nombre 
+FROM registro_compra INNER JOIN proveedores ON registro_compra.ID_proveedor = proveedores.IDproveedor
+WHERE Estado_Compra=0;');
+// Ejecuta consulta
+$miConsulta2->execute();

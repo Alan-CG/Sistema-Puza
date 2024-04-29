@@ -1,4 +1,4 @@
-<?php include 'model/consultacompra.php' ?>
+<?php include 'model/consulta_llega_mat.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,37 +53,28 @@
             <thead>
               <tr>
               <th hidden scope="col">IDregistro</th>
-                    <th scope="col">Folio</th>
-                    <th scope="col">Proveedor</th>
-                    <th scope="col">Fecha de pedido</th>
-                    <th scope="col">Total de compra</th>
-                    <th scope="col">Detalles</th>
-                <th scope="col">Confirmar llegada</th>
+                    <th scope="col">Materia</th>
+                    <th scope="col">Cantidad Comprada</th>
+                    <th scope="col">Confirmar llegada</th>
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($miConsulta2 as $clave => $valor): ?>
+              <?php foreach ($miConsulta as $clave => $valor): ?>
                 <tr>
                   <td hidden>
-                    <?= $valor['IDregistro_compra']; ?>
+                    <?= $valor['IDCompra_materia']; ?>
+                  </td>
+                  <td hidden>
+                    <?= $valor['ID_Materia']; ?>
                   </td>
                   <td>
-                    <?= $valor['Folio']; ?>
+                    <?= $valor['NombreMateria']; ?>
                   </td>
                   <td>
-                    <?= $valor['Razon_social_nombre']; ?>
+                    <?= $valor['Cantidad_Compra']; ?>
                   </td>
                   <td>
-                    <?= $valor['Fecha_Entrada']; ?>
-                  </td>
-                  <td>
-                    <?= $valor['Total_compra']; ?>
-                  </td>
-                  <td>
-                    <a class="btn btn-primary bi bi-plus-square-fill" href="compra_llega_mat.php?IDregistro_compra=<?= $valor['IDregistro_compra'] ?>"></a>
-                  </td>
-                  <td>
-                    <a class="btn btn-success bi bi-clipboard-check-fill" href="model/borrarmatprimbd.php?IDmateriaprima=<?= $valor['IDregistro_compra'] ?>"></a>
+                    <a class="btn btn-primary bi bi-plus-square-fill" href="model/actualiza_stock_mat.php?IDmateriaprima=<?= $valor['ID_Materia'] ?>"></a>
                   </td>
                 </tr>
               <?php endforeach; ?>
