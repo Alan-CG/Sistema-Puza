@@ -6,11 +6,10 @@ $usuarioDB = 'root';
 $contrasenyaDB = '';
 $codigo = isset($_REQUEST['IDcliente']) ? $_REQUEST['IDcliente'] : null;
 $nombre = isset($_REQUEST['input_nombreclient']) ? $_REQUEST['input_nombreclient'] : null;
-$apellidop = isset($_REQUEST['input_apellidopclient']) ? $_REQUEST['input_apellidopclient'] : null;
-$apellidom = isset($_REQUEST['input_apellidomclient']) ? $_REQUEST['input_apellidomclient'] : null;
+$rfc_cliente = isset($_REQUEST['input_rfc_cliente']) ? $_REQUEST['input_rfc_cliente'] : null;
 $telefono = isset($_REQUEST['input_telefonoclient']) ? $_REQUEST['input_telefonoclient'] : null;
 $correo = isset($_REQUEST['input_correoclient']) ? $_REQUEST['input_correoclient'] : null;
-$estado = isset($_REQUEST['input_estadoclient']) ? $_REQUEST['input_estadoclient'] : null;
+$idestado = isset($_REQUEST['input_estadocliente']) ? $_REQUEST['input_estadocliente'] : null;
 $calle = isset($_REQUEST['input_calleclient']) ? $_REQUEST['input_calleclient'] : null;
 $colonia = isset($_REQUEST['input_coloniaclient']) ? $_REQUEST['input_coloniaclient'] : null;
 $codigopostal = isset($_REQUEST['input_cpclient']) ? $_REQUEST['input_cpclient'] : null;
@@ -22,24 +21,24 @@ $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 // Comprobamso si recibimos datos por POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepara UPDATE
-    $miUpdate = $miPDO->prepare('UPDATE clientes SET NombreCliente = :NombreCliente, 
-    ApellidoP = :ApellidoP, ApellidoM = :ApellidoM, 
+    $miUpdate = $miPDO->prepare('UPDATE clientes SET RFC_cliente = :RFC_cliente, 
+    NombreCliente = :NombreCliente, 
     TelefonoCliente = :TelefonoCliente, CorreoCliente = :CorreoCliente, 
     CalleCliente = :CalleCliente, ColoniaCliente = :ColoniaCliente, 
-    CodigopostalCliente = :CodigopostalCliente, IDestado = :IDestado WHERE IDcliente = :IDcliente');
+    CodigopostalCliente = :CodigopostalCliente, IDestado = :IDestado, EstadoCliente=:EstadoCliente WHERE IDcliente = :IDcliente');
     // Ejecuta UPDATE con los datos
     $miUpdate->execute(
         [
             'IDcliente' => $codigo,
             'NombreCliente' => $nombre,
-            'ApellidoP' => $apellidop,
-            'ApellidoM' => $apellidom,
+            'RFC_cliente' =>$rfc_cliente,
             'TelefonoCliente' => $telefono,
             'CorreoCliente' => $correo,
             'CalleCliente'=> $calle,
-            'ColoniaCliente'=> $colonia,
+            'ColoniaCliente'=> $colonia, 
             'CodigopostalCliente'=> $codigopostal,
-            'IDestado'=> $estado
+            'IDestado'=> $idestado,
+            'EstadoCliente' => 1
         ]
     );
     // Redireccionamos a Leer

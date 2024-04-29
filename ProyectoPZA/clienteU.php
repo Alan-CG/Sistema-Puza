@@ -1,7 +1,7 @@
 <?php include 'model/modificarclientebd.php' ?>
 <?php include 'model/consultaclientebd.php' ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
   <meta charset="UTF-8">
@@ -28,9 +28,11 @@
       </div>
     </div>
   </header>
-  <div class="container">
+   <div class="container">
     <h4 class="text-center">Actualizar datos de cliente</h4>
-    <form method="post" class="needs-validation" novalidate>
+
+    <form action="model/modificarclientebd.php" method="POST" class="needs-validation" novalidate>
+    
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="input_nombreclient">Nombre</label>
@@ -40,10 +42,10 @@
         Rellena el campo correctamente
       </div>
         </div>
-        <div class="form-group col-md-6">
+        <!-- <div class="form-group col-md-6">
           <label for="input_apellidopclient">Apellido Paterno</label>
           <input type="text" class="form-control" id="input_apellidopclient" name="input_apellidopclient"
-            value="<?= $cliente['ApellidoP'] ?>" required>
+            value $cliente['ApellidoP'] ?>" required>
             <div class="invalid-feedback">
         Rellena el campo correctamente
       </div>
@@ -51,19 +53,25 @@
         <div class="form-group col-md-6">
           <label for="input_apellidomclient">Apellido Materno</label>
           <input type="text" class="form-control" id="input_apellidomclient" name="input_apellidomclient"
-            value="<?= $cliente['ApellidoM'] ?>" required>
+            value $cliente['ApellidoM'] ?>" required>
             <div class="invalid-feedback">
         Rellena el campo correctamente
-      </div>
+      </div> -->
+      <div class="form-group col-md-6">
+        <label for="input_rfc_cliente">RFC</label>
+        <input type="number" class="form-control" id="input_rfc_cliente" name="input_rfc_cliente"
+            value="<?= $cliente['RFC_cliente'] ?>" required>
+          <div class="invalid-feedback"> 
+        Rellena el campo correctamente
         </div>
-        <div class="form-group col-md-6">
-          <label for="input_telefonoclient">Teléfono</label>
-          <input type="number" class="form-control" id="input_telefonoclient" name="input_telefonoclient"
+      </div>
+      <div class="form-group col-md-6">
+        <label for="input_telefonoclient">Teléfono</label>
+        <input type="number" class="form-control" id="input_telefonoclient" name="input_telefonoclient"
             value="<?= $cliente['TelefonoCliente'] ?>" required>
-            <div class="invalid-feedback">
-        Rellena el campo correctamente
+          <div class="invalid-feedback">Rellena el campo correctamente
+          </div>
       </div>
-        </div>
         <div class="form-group col-md-6">
           <label for="input_correoclient">Correo</label>
           <input type="email" class="form-control" id="input_correoclient" name="input_correoclient"
@@ -73,8 +81,8 @@
       </div>
         </div>
         <div class="form-group col-md-6">
-          <label for="input_estadoclient">Estado</label>
-          <select class="custom-select" name="input_estadoclient" id="input_estadoclient" value="<?= $cliente['IDestado'] ?>">
+          <label for="input_estadocliente">Estado</label>
+          <select class="custom-select" name="input_estadocliente" id="input_estadocliente" value="<?= $cliente['IDestado'] ?>">
           <?php foreach ($ejecutar as $opciones): ?>
               <option value="<?php echo $opciones['ID_estado'] ?>"><?php echo $opciones['Estado'] ?></option>
             <?php endforeach ?>
@@ -107,7 +115,7 @@
         <div class="form-group col-md-6">
         </div>
         <input type="hidden" name="IDcliente" value="<?= $codigo ?>">
-        <input type="submit" value="Actualizar" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary" >Guardar</button>
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">
