@@ -27,6 +27,29 @@
         <p class="lead">Sistema de inventario</p>
       </div>
     </div>
+    <nav class="nav navbar-expand-sm">
+          <a class="nav-link active" href="menu.php">Menú</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Catalogos
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="matprimR.php">Materias primas</a>
+              <a class="dropdown-item" href="clienteR.php">Clientes</a>
+              <a class="dropdown-item" href="proveedoresR.php">Proveedores</a>
+              <a class="dropdown-item" href="productosR.php">Productos</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Otros
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Productos terminados</a>
+              <a class="dropdown-item" href="#">Cotización</a>
+            </div>
+          </li>
+        </nav>
   </header>
   <br>
   <div class="container">

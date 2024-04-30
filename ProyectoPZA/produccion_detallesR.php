@@ -1,4 +1,4 @@
-<?php include "model/consultapedidos.php" ?>
+<?php include "model/consultaproduccion_detalles.php" ?>
 
 <!DOCTYPE html>
 <html lang="es-MX">
@@ -28,29 +28,6 @@
                 <p class="lead">Sistema de inventario</p>
             </div>
         </div>
-        <nav class="nav navbar-expand-sm">
-          <a class="nav-link active" href="menu.php">Menú</a>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Catalogos
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="matprimR.php">Materias primas</a>
-              <a class="dropdown-item" href="clienteR.php">Clientes</a>
-              <a class="dropdown-item" href="proveedoresR.php">Proveedores</a>
-              <a class="dropdown-item" href="productosR.php">Productos</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Otros
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Productos terminados</a>
-              <a class="dropdown-item" href="#">Cotización</a>
-            </div>
-          </li>
-        </nav>
     </header>
     <br>
     <div class="container">
@@ -64,34 +41,26 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th hidden scope="col">IDpedido</th>
-                        <th scope="col">Folio</th>
-                        <th scope="col">Fecha del pedido</th>
-                        <th scope="col">Cliente</th>
-                        <th scope="col">Total</th>
-                        <th scope="col">Detalles</th>
+                        <th hidden scope="col">IDPedidoProducto</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Confirmar Producción</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach($miConsulta as $clave=>$dato): ?>
                     <tr>
                         <td hidden>
-                            <?= $dato['IDPedido']; ?>
+                            <?= $dato['IDPedidoProducto']; ?>
                         </td>
                         <td>
-                            <?= $dato['Folio']; ?>
+                            <?= $dato['NombreProducto']; ?>
                         </td>
                         <td>
-                            <?= $dato['FechaPedido']; ?>
+                            <?= $dato['Cantidad']; ?>
                         </td>
                         <td>
-                            <?= $dato['NombreCliente']; ?>
-                        </td>
-                        <td>
-                            $<?= $dato['TotalPedido']; ?>
-                        </td>
-                        <td>
-                            <a class="btn btn-primary bi bi-plus-square" href="pedidos_detallesR.php?IDPedido=<?= $dato['IDPedido'] ?>"></a>
+                            <a class="btn btn-primary bi bi-plus-square" href="model/actualiza_stock_producto.php?IDPedidoProducto=<?= $dato['IDPedidoProducto'] ?>"></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
@@ -100,10 +69,11 @@
         </div>
         <div class="row w-100 align-items-center">
             <div class="col text-center">
-                <a href="" class="btn btn-primary">Regresar</a>
+                <a href="produccionR.php" class="btn btn-primary">Regresar</a>
             </div>
         </div>
     </div>
 
 </body>
+
 </html>

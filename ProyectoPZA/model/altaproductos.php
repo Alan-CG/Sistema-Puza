@@ -44,6 +44,7 @@ $materiales_string = implode(",", $materiales);
 // Prepara INSERT para la formula
 $formula_query = "INSERT INTO formula_producto (ID_Materia, ID_Producto, Cantidad_insumo) VALUES (:materiales, :idproducto, :cantidades)";
 $miInsertFormula = $miPDO->prepare($formula_query);
+$costo_final=0;
 
 //Los campos dinámicos van crear un arreglo de datos:
 //Algo similar a [Indice 1: ID_materia_prima,Cantidad
@@ -127,6 +128,8 @@ $miupdate->execute([
     'preciofinal' => $precio_venta_final,
     'idproducto' => $idproducto
 ]);
+
+header('Location: ../productosR.php');
 
 // Calcula el precio de venta sumando un margen de ganancia al costo final
 

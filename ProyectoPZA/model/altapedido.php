@@ -46,6 +46,7 @@ $lista_query = "INSERT INTO pedidos_productos (ID_Pedido,ID_Producto,Cantidad) V
 $miInsertLista = $miPDO->prepare($lista_query);
 
 $total_final=0;
+
 try {
     foreach ($_POST['input_producto'] as $index => $producto_id) {
         $cantidad_comprada = $_POST['input_cantidad'][$index];

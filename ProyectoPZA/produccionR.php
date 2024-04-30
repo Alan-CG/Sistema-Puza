@@ -1,5 +1,4 @@
 <?php include "model/consultapedidos.php" ?>
-
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -54,7 +53,7 @@
     </header>
     <br>
     <div class="container">
-        <h4 class="text-center">Pedidos</h4>
+        <h4 class="text-center">Producción</h4>
         <div class="form-row">
             <div class="form-group col">
                 <a class="btn btn-primary" href="pedidosC.php">Nuevo pedido</a>
@@ -91,7 +90,7 @@
                             $<?= $dato['TotalPedido']; ?>
                         </td>
                         <td>
-                            <a class="btn btn-primary bi bi-plus-square" href="pedidos_detallesR.php?IDPedido=<?= $dato['IDPedido'] ?>"></a>
+                            <a class="btn btn-primary bi bi-plus-square" href="produccion_detallesR.php?IDPedido=<?= $dato['IDPedido'] ?>"></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
