@@ -35,6 +35,20 @@ $consulta_idproducto_valor=$consulta_idproducto->fetchColumn();
 $consulta="SELECT ID_Materia,Cantidad_insumo FROM formula_producto WHERE ID_Producto = $consulta_idproducto_valor;";
 $consulta_materias=mysqli_query($conexion, $consulta);
 
+//A su vez también se requiere consultar la cantidad de productos comprados
+$cantidad_productos=$miPDO->prepare('SELECT Cantidad FROM pedidos_productos WHERE IDPedidoProducto = :codigo ;');
+
+$cantidad_productos->execute(
+    array(
+        'codigo'=>$idpedidoproducto
+    )
+);
+
+//Se convierte el valor devuelto a valor númerico para poder usarlo más adelante
+$cantidad_productos_valor=$cantidad_productos->fetchColumn();
+
+//Habiendo capturado la cantidad de productos del pedido se anidaran ciclos para poder descontar el total de materias
+//primas utilizadas
 //A continuación se usa un ciclo para ir iterando entre los registros de la formula de producto, por cada registro se hace
 //el update(descuento) de las materias primas requeridas
 
@@ -42,9 +56,10 @@ if (mysqli_num_rows($consulta_materias) > 0) {
     while ($fila = mysqli_fetch_row($consulta_materias)) {
       $id_materia_prima = $fila[0];
       $cantidad_usada = $fila[1];
+      $cantidad_usada_multi=$cantidad_usada*$cantidad_productos_valor;
   
       $consulta_actualizacion = "UPDATE materias_primas 
-      SET ExistenciasMateria = ExistenciasMateria - $cantidad_usada WHERE IDmateriaprima = $id_materia_prima";
+      SET ExistenciasMateria = ExistenciasMateria - $cantidad_usada_multi WHERE IDmateriaprima = $id_materia_prima";
       mysqli_query($conexion, $consulta_actualizacion);
     }
   } else {
@@ -58,6 +73,7 @@ if (mysqli_num_rows($consulta_materias) > 0) {
     $url = "../produccion_detallesR.php?IDPedido=$url_idpedido";
     header("Location:$url");
   }
+
 
 //A continuación actualizo el estado del registro para que se deje de visualizar en producción
 $update_estado=$miPDO->prepare('UPDATE pedidos_productos SET EstadoPedidoProducto = 1 WHERE IDPedidoProducto = :codigo ;');
