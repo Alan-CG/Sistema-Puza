@@ -74,13 +74,13 @@
                     <?= $valor['Cantidad_Compra']; ?>
                   </td>
                   <td>
-                    <a class="btn btn-primary bi bi-plus-square-fill" href="model/actualiza_stock_mat.php?IDmateriaprima=<?= $valor['ID_Materia'] ?>"></a>
+                    <a class="btn btn-primary bi bi-plus-square-fill" href="model/actualiza_stock_mat.php?IDCompra_materia=<?= $valor['IDCompra_materia'] ?>"></a>
                   </td>
                 </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
-          <a href="menu.php" class="bi bi-arrow-return-left btn btn-primary"></a> 
+          <a href="compras_llegaR.php" class="bi bi-arrow-return-left btn btn-primary"></a> 
         </div>
       </div>
     </div>

@@ -18,4 +18,8 @@ $conexion=mysqli_connect($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB) or die(mys
 $consulta = "SELECT * FROM estados";
 $ejecutar=mysqli_query($conexion, $consulta) or die(mysqli_error($conexion));
 
+$conexion2=mysqli_connect($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB) or die(mysqli_error($conexion));
+$consulta2 = "SELECT IDcliente,NombreCliente FROM clientes WHERE EstadoCliente=1;";
+$ejecutar2=mysqli_query($conexion, $consulta2) or die(mysqli_error($conexion2));
+
 ?>

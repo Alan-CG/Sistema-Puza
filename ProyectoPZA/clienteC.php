@@ -31,7 +31,6 @@
     <h4 class="text-center">Registrar Cliente</h4>
 
     <form action="model/altacliente.php" method="POST" class="needs-validation" novalidate>
-
         <div class="form-group col-md-4">
           <label for="input_nombreclient">Nombre</label>
           <input type="text" class="form-control" id="input_nombreclient" name="input_nombrecliente"

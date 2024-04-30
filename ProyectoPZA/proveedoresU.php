@@ -1,7 +1,7 @@
 <?php include 'model/modificarprovebd.php' ?>
 <?php include 'model/consultaprovebd.php' ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 
 <head>
   <meta charset="UTF-8">

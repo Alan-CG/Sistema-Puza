@@ -28,3 +28,7 @@ $miConsulta2->execute(
     ]
 );
 $producto = $miConsulta2->fetch();
+
+$miConsulta3 = $miPDO->prepare('SELECT IDproducto,NombreProducto FROM productos WHERE EstadoProducto = 1');
+$miConsulta3->execute();
+//$producto = $miConsulta2->fetch();

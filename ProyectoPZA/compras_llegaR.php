@@ -58,7 +58,6 @@
                     <th scope="col">Fecha de pedido</th>
                     <th scope="col">Total de compra</th>
                     <th scope="col">Detalles</th>
-                <th scope="col">Confirmar llegada</th>
               </tr>
             </thead>
             <tbody>
@@ -81,9 +80,6 @@
                   </td>
                   <td>
                     <a class="btn btn-primary bi bi-plus-square-fill" href="compra_llega_mat.php?IDregistro_compra=<?= $valor['IDregistro_compra'] ?>"></a>
-                  </td>
-                  <td>
-                    <a class="btn btn-success bi bi-clipboard-check-fill" href="model/borrarmatprimbd.php?IDmateriaprima=<?= $valor['IDregistro_compra'] ?>"></a>
                   </td>
                 </tr>
               <?php endforeach; ?>

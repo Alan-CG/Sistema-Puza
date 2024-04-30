@@ -9,19 +9,17 @@ $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
 $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 $conexion=mysqli_connect($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB) or die(mysqli_error($conexion));
 
-$codigo = isset($_REQUEST['IDregistro_compra']) ? $_REQUEST['IDregistro_compra'] : null;
+$codigo = isset($_REQUEST['IDPedido']) ? $_REQUEST['IDPedido'] : null;
 // Prepara SELECT
 //$miConsulta = $miPDO->prepare('SELECT materias_primas.*,proveedores.Razon_social_nombre 
 //FROM materias_primas INNER JOIN proveedores ON materias_primas.IDproveedor = proveedores.IDproveedor
 //WHERE materias_primas.EstadoMateria = 1 ORDER BY IDproveedor ASC;');
 
-$miConsulta = $miPDO->prepare('SELECT compras_materias.*,materias_primas.NombreMateria FROM compras_materias 
-INNER JOIN materias_primas ON compras_materias.ID_Materia = materias_primas.IDmateriaprima 
-WHERE IDregistro_compra=:idcompra AND EstadoCompraMat = 0;');
+$miConsulta = $miPDO->prepare('SELECT pedidos_productos.*,productos.NombreProducto FROM 
+pedidos_productos INNER JOIN productos ON pedidos_productos.ID_Producto = productos.IDproducto
+WHERE ID_Pedido=:idpedido;');
 
 // Ejecuta consulta
-$miConsulta->execute(
-    array(
-        'idcompra'=>$codigo
-    )
-);
+$miConsulta->execute([
+    'idpedido'=>$codigo
+]);
