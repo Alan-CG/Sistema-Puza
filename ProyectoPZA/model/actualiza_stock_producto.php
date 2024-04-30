@@ -84,6 +84,15 @@ $update_estado->execute(
     )
 );
 
+//A continuación envío el id del pedido producto a la tabla de productos terminados
+$insertprodter=$miPDO->prepare('INSERT INTO productos_terminados(ID_pedido_producto) VALUES (:codigo);');
+
+$insertprodter->execute(
+    array(
+        'codigo'=>$idpedidoproducto
+    )
+);
+
 
 //Regreso a la página de leer  
 $consulta_url=$miPDO->prepare('SELECT ID_Pedido FROM pedidos_productos WHERE IDPedidoProducto = :codigo ;');
