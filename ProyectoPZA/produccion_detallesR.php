@@ -16,7 +16,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style><?php include "css/style_general.css" ?></style>
-    <title>Pedidos</title>
+    <title>Producción</title>
 </head>
 
 <body>

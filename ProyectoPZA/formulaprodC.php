@@ -13,8 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style_general.css">
-    <title>Formula de productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style><?php include "css/style_general.css" ?></style>
+    <title>Productos</title>
 </head>
 
 <body> 
@@ -38,6 +39,7 @@
             </div>
         </div>
     </header>
+    <br>
     <div class="container">
         <h4 class="text-center">Alta de Nuevo Producto</h4>
         <br>

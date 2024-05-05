@@ -26,7 +26,7 @@
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Catalogos
+              Catálogos
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="matprimR.php">Materias primas</a>
@@ -40,13 +40,15 @@
               Otros
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Productos terminados</a>
-              <a class="dropdown-item" href="#">Cotización</a>
+              <a class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
+              <a class="dropdown-item" href="comprasR.php">Compras</a>
+              <a class="dropdown-item" href="pedidosR.php">Pedidos</a>
+              <a class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
+              <a class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
+              <a class="dropdown-item" href="produccionR.php">Producción</a>
             </div>
           </li>
         </nav>
-
-         
  </header>
     <div class="container">
       <h3 class="text-center">Lista de clientes</h3>

@@ -38,6 +38,8 @@
                     <th hidden scope="col">ID</th>
                     <th hidden scope="col">IDregistro</th>
                     <th scope="col">Materia prima</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Costo</th>
                     <th scope="col">Cantidad</th>
                 </tr>
             </thead>
@@ -52,6 +54,12 @@
               </td>
               <td>
                 <?= $valor['NombreMateria']; ?>
+              </td>
+              <td>
+                <?= $valor['DescripcionMateria']; ?>
+              </td>
+              <td>
+                <?= $valor['CostoMateria']; ?>
               </td>
               <td>
                 <?= $valor['Cantidad_Compra']; ?>
