@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style><?php include "css/style_general.css" ?></style>
     <title>Menú</title>
+
+    <style type="text/css">
+    .esconder{
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,9 +25,38 @@
               <h1 class="display-4">Puza</h1>
               <p class="lead">Sistema de inventario</p>
             </div>
-          </div>
+        </div>
+        <nav class="nav navbar-expand-sm">
+          <a class="nav-link active" href="menu.php">Menú</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Catálogos
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="matprimR.php">Materias primas</a>
+              <a class="dropdown-item" href="clienteR.php">Clientes</a>
+              <a class="dropdown-item" href="proveedoresR.php">Proveedores</a>
+              <a class="dropdown-item" href="productosR.php">Productos</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Otros
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
+              <a class="dropdown-item" href="comprasR.php">Compras</a>
+              <a class="dropdown-item" href="pedidosR.php">Pedidos</a>
+              <a class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
+              <a class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
+              <a class="dropdown-item" href="produccionR.php">Producción</a>
+            </div>
+          </li>
+          <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
+        </nav>
  </header>
     <br>
+    <h1>Bienvenido, <?php echo $_SESSION['rol_usuario'];?></h1>
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
@@ -32,7 +68,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div id="div-productos" class="col-sm-6">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Productos</h5>
@@ -61,6 +97,15 @@
               </div>
           </div>
     </div>
+    <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
+
+    <script>
+      var tipo_usuario = document.getElementById('usuario').innerText;
+      if(tipo_usuario=="2"){
+        document.getElementById('div-productos').classList.add('esconder');
+      }
+      
+    </script>
     
 </body>
 </html>
