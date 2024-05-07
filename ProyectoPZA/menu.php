@@ -100,7 +100,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Productos Terminados</h5>
                     <p class="card-text">Acceder a los registros de productos terminados</p>
-                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                    <a href="productosterminadosR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
               </div>
@@ -109,7 +109,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Compras por llegar</h5>
                     <p class="card-text">Acceder a los registros de compras por llegar</p>
-                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                    <a href="compras_llegaR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
               </div>
@@ -118,7 +118,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Compras confirmadas</h5>
                     <p class="card-text">Acceder a los registros de compras confirmadas</p>
-                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                    <a href="compras_confiR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
               </div>
@@ -127,7 +127,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Compras</h5>
                     <p class="card-text">Acceder a los registros de compras</p>
-                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                    <a href="comprasR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Pedidos</h5>
                     <p class="card-text">Acceder a los registros de pedidos</p>
-                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                    <a href="pedidosR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
               </div>
@@ -145,7 +145,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Producción</h5>
                     <p class="card-text">Acceder al modulo de producción</p>
-                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                    <a href="produccionR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
               </div>

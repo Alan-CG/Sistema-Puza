@@ -103,7 +103,7 @@
         </div>
         <div class="row w-100 align-items-center">
             <div class="col text-center">
-                <a href="produccionR.php" class="btn btn-primary">Regresar</a>
+                <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
             </div>
         </div>
     </div>
