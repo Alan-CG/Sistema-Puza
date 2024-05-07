@@ -33,10 +33,10 @@
               Catálogos
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="matprimR.php">Materias primas</a>
-              <a class="dropdown-item" href="clienteR.php">Clientes</a>
-              <a class="dropdown-item" href="proveedoresR.php">Proveedores</a>
-              <a class="dropdown-item" href="productosR.php">Productos</a>
+              <a id="nav-matprim" class="dropdown-item" href="matprimR.php">Materias primas</a>
+              <a id="nav-clientes" class="dropdown-item" href="clienteR.php">Clientes</a>
+              <a id="nav-proveedores" class="dropdown-item" href="proveedoresR.php">Proveedores</a>
+              <a id="nav-productos" class="dropdown-item" href="productosR.php">Productos</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -44,12 +44,12 @@
               Otros
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
-              <a class="dropdown-item" href="comprasR.php">Compras</a>
-              <a class="dropdown-item" href="pedidosR.php">Pedidos</a>
-              <a class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
-              <a class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
-              <a class="dropdown-item" href="produccionR.php">Producción</a>
+              <a id="nav-prodter" class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
+              <a id="nav-compras" class="dropdown-item" href="comprasR.php">Compras</a>
+              <a id="nav-pedidos" class="dropdown-item" href="pedidosR.php">Pedidos</a>
+              <a id="nav-compras_llegar" class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
+              <a id="nav-compras_confir" class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
+              <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
             </div>
           </li>
           <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
@@ -59,7 +59,7 @@
     <h1>Bienvenido, <?php echo $_SESSION['rol_usuario'];?></h1>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div id="div-materiasprimas" class="col-sm-4">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Materias primas</h5>
@@ -68,7 +68,7 @@
                 </div>
               </div>
             </div>
-            <div id="div-productos" class="col-sm-6">
+            <div id="div-productos" class="col-sm-4">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Productos</h5>
@@ -77,7 +77,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div id="div-clientes" class="col-sm-4">
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">Clientes</h5>
@@ -86,11 +86,65 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div id="div-proveedores" class="col-sm-4">
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">Proveedores</h5>
                     <p class="card-text">Acceder a la base de datos de proveedores</p>
+                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                  </div>
+                </div>
+              </div>
+              <div id="div-prodter" class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Productos Terminados</h5>
+                    <p class="card-text">Acceder a los registros de productos terminados</p>
+                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                  </div>
+                </div>
+              </div>
+              <div id="div-compras_llegar" class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Compras por llegar</h5>
+                    <p class="card-text">Acceder a los registros de compras por llegar</p>
+                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                  </div>
+                </div>
+              </div>
+              <div id="div-compras_confir" class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Compras confirmadas</h5>
+                    <p class="card-text">Acceder a los registros de compras confirmadas</p>
+                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                  </div>
+                </div>
+              </div>
+              <div id="div-compras" class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Compras</h5>
+                    <p class="card-text">Acceder a los registros de compras</p>
+                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                  </div>
+                </div>
+              </div>
+              <div id="div-pedidos" class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Pedidos</h5>
+                    <p class="card-text">Acceder a los registros de pedidos</p>
+                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                  </div>
+                </div>
+              </div>
+              <div id="div-produccion" class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Producción</h5>
+                    <p class="card-text">Acceder al modulo de producción</p>
                     <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
                   </div>
                 </div>
@@ -102,7 +156,54 @@
     <script>
       var tipo_usuario = document.getElementById('usuario').innerText;
       if(tipo_usuario=="2"){
+        //IDs de tarjetas
         document.getElementById('div-productos').classList.add('esconder');
+        document.getElementById('div-clientes').classList.add('esconder');
+        document.getElementById('div-proveedores').classList.add('esconder');
+        document.getElementById('div-compras').classList.add('esconder');
+        document.getElementById('div-pedidos').classList.add('esconder');
+        document.getElementById('div-produccion').classList.add('esconder');
+        //IDs de nav items
+        document.getElementById('nav-productos').classList.add('esconder');
+        document.getElementById('nav-clientes').classList.add('esconder');
+        document.getElementById('nav-proveedores').classList.add('esconder');
+        document.getElementById('nav-compras').classList.add('esconder');
+        document.getElementById('nav-pedidos').classList.add('esconder');
+        document.getElementById('nav-produccion').classList.add('esconder');
+      }else if(tipo_usuario=="3"){
+        //IDs de tarjetas
+        document.getElementById('div-materiasprimas').classList.add('esconder');
+        document.getElementById('div-prodter').classList.add('esconder');
+        document.getElementById('div-compras_llegar').classList.add('esconder');
+        document.getElementById('div-compras_confir').classList.add('esconder');
+        document.getElementById('div-produccion').classList.add('esconder');
+        document.getElementById('div-productos').classList.add('esconder');
+        //IDs de nav items
+        document.getElementById('nav-matprim').classList.add('esconder');
+        document.getElementById('nav-prodter').classList.add('esconder');
+        document.getElementById('nav-compras_llegar').classList.add('esconder');
+        document.getElementById('nav-compras_confir').classList.add('esconder');
+        document.getElementById('nav-produccion').classList.add('esconder');
+        document.getElementById('nav-productos').classList.add('esconder');
+      }else if(tipo_usuario=="4"){
+        //IDs de tarjetas
+        document.getElementById('div-clientes').classList.add('esconder');
+        document.getElementById('div-proveedores').classList.add('esconder');
+        document.getElementById('div-compras').classList.add('esconder');
+        document.getElementById('div-pedidos').classList.add('esconder');
+        document.getElementById('div-materiasprimas').classList.add('esconder');
+        document.getElementById('div-prodter').classList.add('esconder');
+        document.getElementById('div-compras_llegar').classList.add('esconder');
+        document.getElementById('div-compras_confir').classList.add('esconder');
+        //IDs de nav items
+        document.getElementById('nav-clientes').classList.add('esconder');
+        document.getElementById('nav-proveedores').classList.add('esconder');
+        document.getElementById('nav-compras').classList.add('esconder');
+        document.getElementById('nav-pedidos').classList.add('esconder');
+        document.getElementById('nav-matprim').classList.add('esconder');
+        document.getElementById('nav-prodter').classList.add('esconder');
+        document.getElementById('nav-compras_llegar').classList.add('esconder');
+        document.getElementById('nav-compras_confir').classList.add('esconder');
       }
       
     </script>
