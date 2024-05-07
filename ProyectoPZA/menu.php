@@ -56,7 +56,7 @@
         </nav>
  </header>
     <br>
-    <h1>Bienvenido, <?php echo $_SESSION['rol_usuario'];?></h1>
+    
     <div class="container">
         <div class="row">
             <div id="div-materiasprimas" class="col-sm-4">

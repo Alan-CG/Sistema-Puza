@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include 'model/consultamatprimbd.php' ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +11,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style><?php include "css/style_general.css" ?></style>
     <title>Materias primas</title>
+
+    <style type="text/css">
+    .esconder{
+      display: none;
+    }
+  </style>
+
 </head>
 <body>
 
  <header>
+      <h1>Bienvenido, <?php echo $_SESSION['rol_usuario'];?></h1>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <h1 class="display-4">Puza</h1>
@@ -28,9 +37,9 @@
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="matprimR.php">Materias primas</a>
-              <a class="dropdown-item" href="clienteR.php">Clientes</a>
-              <a class="dropdown-item" href="proveedoresR.php">Proveedores</a>
-              <a class="dropdown-item" href="productosR.php">Productos</a>
+              <a id="nav-clientes" class="dropdown-item" href="clienteR.php">Clientes</a>
+              <a id="nav-proveedores" class="dropdown-item" href="proveedoresR.php">Proveedores</a>
+              <a id="nav-productos" class="dropdown-item" href="productosR.php">Productos</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -39,11 +48,11 @@
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
-              <a class="dropdown-item" href="comprasR.php">Compras</a>
-              <a class="dropdown-item" href="pedidosR.php">Pedidos</a>
+              <a id="nav-compras" class="dropdown-item" href="comprasR.php">Compras</a>
+              <a id="nav-pedidos" class="dropdown-item" href="pedidosR.php">Pedidos</a>
               <a class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
               <a class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
-              <a class="dropdown-item" href="produccionR.php">Producción</a>
+              <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
             </div>
           </li>
         </nav>
@@ -69,7 +78,7 @@
                 <th scope="col">Existencias</th>
                 <th scope="col">Fecha de entrada</th>
                 <th scope="col">Modificar</th>
-                <th scope="col">Eliminar</th>
+                <th id="eliminar-btn" scope="col">Eliminar</th>
               </tr>
             </thead>
             <tbody>
@@ -100,7 +109,7 @@
                     <a class="btn btn-primary bi bi-pencil-square" href="matprimU.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
                   </td>
                   <td>
-                    <a class="btn btn-danger bi bi-trash3-fill" href="model/borrarmatprimbd.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
+                    <a id="eliminar-btn1" class="" class="btn btn-danger bi bi-trash3-fill" href="model/borrarmatprimbd.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
                   </td>
                 </tr>
               <?php endforeach; ?>
@@ -110,5 +119,28 @@
         </div>
       </div>
     </div>
+    <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
+
+    <script>
+      var tipo_usuario = document.getElementById('usuario').innerText;
+      if(tipo_usuario=="2"){
+        
+        document.getElementById('eliminar-btn').classList.add('esconder');
+       
+        document.getElementById('eliminar-btn1').classList.add('esconder');
+
+        
+        
+        document.getElementById('nav-productos').classList.add('esconder');
+        document.getElementById('nav-clientes').classList.add('esconder');
+        document.getElementById('nav-proveedores').classList.add('esconder');
+        document.getElementById('nav-compras').classList.add('esconder');
+        document.getElementById('nav-pedidos').classList.add('esconder');
+        document.getElementById('nav-produccion').classList.add('esconder');
+      }
+          
+      </script>
+
+
 </body>
 </html>
