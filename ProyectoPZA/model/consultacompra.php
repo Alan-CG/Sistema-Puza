@@ -28,3 +28,9 @@ FROM registro_compra INNER JOIN proveedores ON registro_compra.ID_proveedor = pr
 WHERE Estado_Compra=0;');
 // Ejecuta consulta
 $miConsulta2->execute();
+
+$miConsulta3 = $miPDO->prepare('SELECT registro_compra.*,proveedores.Razon_social_nombre 
+FROM registro_compra INNER JOIN proveedores ON registro_compra.ID_proveedor = proveedores.IDproveedor
+WHERE Estado_Compra=1;');
+// Ejecuta consulta
+$miConsulta3->execute();

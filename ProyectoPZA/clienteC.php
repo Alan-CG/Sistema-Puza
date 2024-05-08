@@ -18,7 +18,6 @@
   <title>Clientes</title>
 
 </head>
-
 <body>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
@@ -30,8 +29,8 @@
   <div class="container">
     <br>
     <h4 class="text-center">Registrar Cliente</h4>
-
     <form action="model/altacliente.php" method="POST" class="needs-validation" novalidate>
+    <div class="form-row">
         <div class="form-group col-md-4">
           <label for="input_nombreclient">Nombre</label>
           <input type="text" class="form-control" id="input_nombreclient" name="input_nombrecliente"
@@ -41,7 +40,7 @@
         <div class="form-group col-md-4">
           <label for="input_rfc">RFC</label>
           <input type="text" class="form-control" id="input_rfc" name="input_rfc"
-            placeholder="RFC del cliente o representante" required>
+            placeholder="RFC del cliente" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div> 
         </div>
         <div class="form-group col-md-3">
@@ -53,13 +52,13 @@
         <div class="form-group col-md-4">
           <label for="input_correocliente">Correo</label>
           <input type="email" class="form-control" id="input_correocliente" name="input_correocliente"
-            placeholder="Correo del cliente o representante" required>
+            placeholder="Correo del cliente" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div> 
         </div> 
         <div class="form-group col-md-4">
           <label for="input_callecliente">Calle</label>
           <input type="text" class="form-control" id="input_callecliente" name="input_callecliente"
-            placeholder="calle del cliente" required>
+            placeholder="Calle del cliente" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div> 
         </div> 
         <div class="form-group col-md-4">
@@ -68,13 +67,13 @@
             placeholder="Colonia del cliente" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div> 
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-sm-2">
           <label for="input_clientecp">Codigo postal</label>
           <input type="number" class="form-control" id="input_clientecp" name="input_clientecp"
             placeholder="Codigo postal" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div> 
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
           <label for="input_clienteestado">Estado</label>
           <select class="form-control" name="input_clienteestado" id="input_clienteestado" required>
             <?php foreach ($ejecutar as $opciones): ?>
@@ -84,9 +83,12 @@
             <?php endforeach ?>
           </select>
         </div>
-        <div class="form-row">
-          <input type="submit" class="btn btn-primary" name="submit">
-      </div>
+    </div>
+    <div class="form-row">
+          <div class="form-group col-md-4">
+            <input type="submit" class="btn btn-primary" name="submit">
+          </div>
+        </div>
     </form>
     <div class="row w-100 align-items-center">
       <div class="col text-center">

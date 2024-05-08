@@ -22,7 +22,6 @@
 <body>
 
  <header>
-      <h1>Bienvenido, <?php echo $_SESSION['rol_usuario'];?></h1>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <h1 class="display-4">Puza</h1>
@@ -36,7 +35,7 @@
               Catálogos
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="matprimR.php">Materias primas</a>
+              <a id="nav-matprim" class="dropdown-item" href="matprimR.php">Materias primas</a>
               <a id="nav-clientes" class="dropdown-item" href="clienteR.php">Clientes</a>
               <a id="nav-proveedores" class="dropdown-item" href="proveedoresR.php">Proveedores</a>
               <a id="nav-productos" class="dropdown-item" href="productosR.php">Productos</a>
@@ -47,16 +46,17 @@
               Otros
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
+              <a id="nav-usuario" class="dropdown-item" href="usuariosR.php">Usuarios</a>
+              <a id="nav-prodter" class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
               <a id="nav-compras" class="dropdown-item" href="comprasR.php">Compras</a>
               <a id="nav-pedidos" class="dropdown-item" href="pedidosR.php">Pedidos</a>
-              <a class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
-              <a class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
+              <a id="nav-compras_llegar" class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
+              <a id="nav-compras_confir" class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
               <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
             </div>
           </li>
+          <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
         </nav>
-        
  </header>
     <div class="container">
       <h3 class="text-center"> Lista de materias primas</h3>

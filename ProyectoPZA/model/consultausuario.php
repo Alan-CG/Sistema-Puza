@@ -16,3 +16,5 @@ WHERE usuario.EstadoUsuario=1 ORDER BY Fecha_creacion ASC;');
 
 // Ejecuta consulta
 $miConsulta->execute();
+$miConsulta2 = $miPDO->prepare('SELECT * FROM tipo_usuario;');
+$miConsulta2->execute();

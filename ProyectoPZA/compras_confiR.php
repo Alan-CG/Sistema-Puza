@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 
-<?php include 'model/consultamatprimbd.php' ?>
+<?php include 'model/consultacompra.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +36,7 @@
               Catálogos
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="matprimR.php">Materias primas</a>
+              <a id="nav-matprim" class="dropdown-item" href="matprimR.php">Materias primas</a>
               <a id="nav-clientes" class="dropdown-item" href="clienteR.php">Clientes</a>
               <a id="nav-proveedores" class="dropdown-item" href="proveedoresR.php">Proveedores</a>
               <a id="nav-productos" class="dropdown-item" href="productosR.php">Productos</a>
@@ -47,14 +47,16 @@
               Otros
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
+              <a id="nav-usuario" class="dropdown-item" href="usuariosR.php">Usuarios</a>
+              <a id="nav-prodter" class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
               <a id="nav-compras" class="dropdown-item" href="comprasR.php">Compras</a>
               <a id="nav-pedidos" class="dropdown-item" href="pedidosR.php">Pedidos</a>
-              <a class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
-              <a class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
+              <a id="nav-compras_llegar" class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
+              <a id="nav-compras_confir" class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
               <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
             </div>
           </li>
+          <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
         </nav>
  </header>
     <div class="container">
@@ -64,34 +66,34 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th hidden scope="col">ID</th>
-                <th scope="col">Folio</th>
-                <th scope="col">Fecha de Compra</th>
-                <th scope="col">Proveedor</th>
-                <th scope="col">Importe Total</th>
-                <th scope="col">Ver detalles</th>
+                    <th hidden scope="col">IDregistro</th>
+                    <th scope="col">Folio</th>
+                    <th scope="col">Proveedor</th>
+                    <th scope="col">Fecha de pedido</th>
+                    <th scope="col">Total de compra</th>
+                    <th scope="col">Detalles</th>
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($miConsulta as $clave => $valor): ?>
+              <?php foreach ($miConsulta3 as $clave => $valor): ?>
                 <tr>
-                  <td hidden>
-                    <?= $valor['IDmateriaprima']; ?>
+                <td hidden>
+                    <?= $valor['IDregistro_compra']; ?>
                   </td>
                   <td>
-                    <?= $valor['NombreMateria']; ?>
-                  </td>
-                  <td>
-                    <?= $valor['DescripcionMateria']; ?>
+                    <?= $valor['Folio']; ?>
                   </td>
                   <td>
                     <?= $valor['Razon_social_nombre']; ?>
                   </td>
                   <td>
-                    <?= $valor['CostoMateria']; ?>
+                    <?= $valor['Fecha_Entrada']; ?>
                   </td>
                   <td>
-                    <a class="btn btn-primary bi bi-plus-square-fill" href="matprimU.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
+                    <?= $valor['Total_compra']; ?>
+                  </td>
+                  <td>
+                    <a class="btn btn-primary bi bi-plus-square-fill" href="compra_confir_llega_mat.php?IDregistro_compra=<?= $valor['IDregistro_compra'] ?>"></a>
                   </td>
                 </tr>
               <?php endforeach; ?>

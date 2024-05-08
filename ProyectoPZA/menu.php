@@ -44,6 +44,7 @@
               Otros
             </a>
             <div class="dropdown-menu">
+              <a id="nav-usuario" class="dropdown-item" href="usuariosR.php">Usuarios</a>
               <a id="nav-prodter" class="dropdown-item" href="productosterminadosR.php">Productos terminados</a>
               <a id="nav-compras" class="dropdown-item" href="comprasR.php">Compras</a>
               <a id="nav-pedidos" class="dropdown-item" href="pedidosR.php">Pedidos</a>
@@ -59,6 +60,15 @@
     
     <div class="container">
         <div class="row">
+            <div id="div-usuario" class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Usuarios</h5>
+                  <p class="card-text">Acceder a los registros de usuarios</p>
+                  <a href="usuariosR.php" class="btn btn-primary">Acceder</a>
+                </div>
+              </div>
+            </div>
             <div id="div-materiasprimas" class="col-sm-4">
               <div class="card">
                 <div class="card-body">
@@ -157,6 +167,7 @@
       var tipo_usuario = document.getElementById('usuario').innerText;
       if(tipo_usuario=="2"){
         //IDs de tarjetas
+        document.getElementById('div-usuario').classList.add('esconder');
         document.getElementById('div-productos').classList.add('esconder');
         document.getElementById('div-clientes').classList.add('esconder');
         document.getElementById('div-proveedores').classList.add('esconder');
@@ -164,6 +175,7 @@
         document.getElementById('div-pedidos').classList.add('esconder');
         document.getElementById('div-produccion').classList.add('esconder');
         //IDs de nav items
+        document.getElementById('nav-usuario').classList.add('esconder');
         document.getElementById('nav-productos').classList.add('esconder');
         document.getElementById('nav-clientes').classList.add('esconder');
         document.getElementById('nav-proveedores').classList.add('esconder');
@@ -172,6 +184,7 @@
         document.getElementById('nav-produccion').classList.add('esconder');
       }else if(tipo_usuario=="3"){
         //IDs de tarjetas
+        document.getElementById('div-usuario').classList.add('esconder');
         document.getElementById('div-materiasprimas').classList.add('esconder');
         document.getElementById('div-prodter').classList.add('esconder');
         document.getElementById('div-compras_llegar').classList.add('esconder');
@@ -179,6 +192,7 @@
         document.getElementById('div-produccion').classList.add('esconder');
         document.getElementById('div-productos').classList.add('esconder');
         //IDs de nav items
+        document.getElementById('nav-usuario').classList.add('esconder');
         document.getElementById('nav-matprim').classList.add('esconder');
         document.getElementById('nav-prodter').classList.add('esconder');
         document.getElementById('nav-compras_llegar').classList.add('esconder');
@@ -187,6 +201,7 @@
         document.getElementById('nav-productos').classList.add('esconder');
       }else if(tipo_usuario=="4"){
         //IDs de tarjetas
+        document.getElementById('div-usuario').classList.add('esconder');
         document.getElementById('div-clientes').classList.add('esconder');
         document.getElementById('div-proveedores').classList.add('esconder');
         document.getElementById('div-compras').classList.add('esconder');
@@ -196,6 +211,7 @@
         document.getElementById('div-compras_llegar').classList.add('esconder');
         document.getElementById('div-compras_confir').classList.add('esconder');
         //IDs de nav items
+        document.getElementById('nav-usuario').classList.add('esconder');
         document.getElementById('nav-clientes').classList.add('esconder');
         document.getElementById('nav-proveedores').classList.add('esconder');
         document.getElementById('nav-compras').classList.add('esconder');
