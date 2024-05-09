@@ -9,7 +9,7 @@ $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
 $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 $conexion=mysqli_connect($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB) or die(mysqli_error($conexion));
 
-$codigo = isset($_REQUEST['IDregistro_compra']) ? $_REQUEST['IDregistro_compra'] : null;
+$codigo = isset($_REQUEST['IDRegistro_compra']) ? $_REQUEST['IDRegistro_compra'] : null;
 // Prepara SELECT
 //$miConsulta = $miPDO->prepare('SELECT materias_primas.*,proveedores.Razon_social_nombre 
 //FROM materias_primas INNER JOIN proveedores ON materias_primas.IDproveedor = proveedores.IDproveedor

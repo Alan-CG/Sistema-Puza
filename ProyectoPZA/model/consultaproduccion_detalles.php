@@ -23,3 +23,12 @@ WHERE ID_Pedido=:idpedido AND EstadoPedidoProducto=0;');
 $miConsulta->execute([
     'idpedido'=>$codigo
 ]);
+
+if($miConsulta->rowCount()===0){
+    $miConsulta2=$miPDO->prepare('UPDATE pedidos SET EstadoPedido=1 WHERE IDPedido=:codigo');
+    $miConsulta2->execute([
+        'codigo' => $codigo
+    ]);
+    header('Location: ../produccionR.php');
+
+}

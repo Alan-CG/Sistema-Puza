@@ -77,7 +77,7 @@ try {
 
         //La siguiente consulta se encarga de actualizar el campo de PrecioCosto con el resultado de la variable anterior $costo_final
         $miupdate=$miPDO->prepare('UPDATE registro_compra SET Total_compra = :calculocompra 
-        WHERE IDregistro_compra = :idcompra');
+        WHERE IDRegistro_compra = :idcompra');
         $miupdate->execute([
             'calculocompra'=>$total_final,
             'idcompra'=>$idcompra

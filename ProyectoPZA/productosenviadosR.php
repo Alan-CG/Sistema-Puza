@@ -1,4 +1,5 @@
-<?php include "model/consultapedidos_detalles.php" ?>
+<?php session_start(); ?>
+<?php include "model/consulta_productos_terminados.php" ?>
 
 <!DOCTYPE html>
 <html lang="es-MX">
@@ -16,7 +17,13 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style><?php include "css/style_general.css" ?></style>
-    <title>Pedidos</title>
+    <title>Productos Enviados</title>
+
+    <style type="text/css">
+    .esconder{
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -61,26 +68,33 @@
     </header>
     <br>
     <div class="container">
-        <h4 class="text-center">Pedidos</h4>
-        <div class="form-row">
-            <div class="form-group col">
-                <a class="btn btn-primary" href="pedidosC.php">Nuevo pedido</a>
-            </div>
-        </div>
+        <h4 class="text-center">Productos Enviados</h4>
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th hidden scope="col">IDPedidoProducto</th>
+                        <th hidden scope="col">IDProductoTerminado</th>
+                        <th scope="col">Folio de Pedido</th>
+                        <th scope="col">Fecha de Pedido</th>
+                        <th scope="col">Cliente</th>
                         <th scope="col">Producto</th>
                         <th scope="col">Cantidad</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($miConsulta as $clave=>$dato): ?>
+                    <?php foreach($miConsulta2 as $clave=>$dato): ?>
                     <tr>
                         <td hidden>
-                            <?= $dato['IDPedidoProducto']; ?>
+                            <?= $dato['IDProductoTerminado']; ?>
+                        </td>
+                        <td>
+                            <?= $dato['Folio']; ?>
+                        </td>
+                        <td>
+                            <?= $dato['FechaPedido']; ?>
+                        </td>
+                        <td>
+                            <?= $dato['NombreCliente']; ?>
                         </td>
                         <td>
                             <?= $dato['NombreProducto']; ?>
@@ -95,10 +109,26 @@
         </div>
         <div class="row w-100 align-items-center">
             <div class="col text-center">
-                <a href="pedidosR.php" class="btn btn-primary">Regresar</a>
+                <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
             </div>
         </div>
     </div>
+    <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
+    <script>
+      var tipo_usuario = document.getElementById('usuario').innerText;
+      if(tipo_usuario=="2"){
+        
+              
+        
+        document.getElementById('nav-productos').classList.add('esconder');
+        document.getElementById('nav-clientes').classList.add('esconder');
+        document.getElementById('nav-proveedores').classList.add('esconder');
+        document.getElementById('nav-compras').classList.add('esconder');
+        document.getElementById('nav-pedidos').classList.add('esconder');
+        document.getElementById('nav-produccion').classList.add('esconder');
+      }
+          
+      </script>
 
 </body>
 

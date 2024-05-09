@@ -61,6 +61,7 @@
           <a id="nav-compras_llegar" class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
           <a id="nav-compras_confir" class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
           <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
+          <a id="nav-produccion" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
         </div>
       </li>
       <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
@@ -90,7 +91,7 @@
           <?php foreach ($miConsulta as $clave => $valor): ?>
             <tr>
               <td hidden>
-                <?= $valor['IDregistro_compra']; ?>
+                <?= $valor['IDRegistro_compra']; ?>
               </td>
               <td>
                 <?= $valor['Folio']; ?>
@@ -106,7 +107,7 @@
               </td>
               <td>
                 <a class="bi bi-plus-square btn btn-success"
-                  href="compras_matR.php?IDregistro_compra=<?= $valor['IDregistro_compra'] ?>"></a>
+                  href="compras_matR.php?IDRegistro_compra=<?= $valor['IDRegistro_compra'] ?>"></a>
               </td>
             </tr>
           <?php endforeach; ?>

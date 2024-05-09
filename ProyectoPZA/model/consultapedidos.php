@@ -9,7 +9,7 @@ $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
 $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);
 // Prepara SELECT
 $miConsulta = $miPDO->prepare('SELECT pedidos.*,clientes.NombreCliente FROM pedidos 
-INNER JOIN clientes ON pedidos.IDCliente = clientes.IDcliente;');
+INNER JOIN clientes ON pedidos.IDCliente = clientes.IDcliente WHERE EstadoPedido=0;');
 // Ejecuta consulta
 $miConsulta->execute();
 

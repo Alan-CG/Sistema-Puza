@@ -63,7 +63,7 @@ $miConsulta3->execute(
 
 $idregistro=$miConsulta3->fetchColumn();
 
-$url = "../compra_llega_mat.php?IDregistro_compra=$idregistro";
+$url = "../compra_llega_mat.php?IDRegistro_compra=$idregistro";
 
 
 header("Location:$url");
