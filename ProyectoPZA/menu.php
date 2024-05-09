@@ -115,6 +115,15 @@
                   </div>
                 </div>
               </div>
+              <div id="div-enviados" class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Productos Enviados</h5>
+                    <p class="card-text">Acceder a los registros de productos enviados</p>
+                    <a href="productosenviadosR.php" class="btn btn-primary">Acceder</a>
+                  </div>
+                </div>
+              </div>
               <div id="div-compras_llegar" class="col-sm-4">
                 <div class="card">
                   <div class="card-body">
@@ -192,6 +201,7 @@
         document.getElementById('div-compras_confir').classList.add('esconder');
         document.getElementById('div-produccion').classList.add('esconder');
         document.getElementById('div-productos').classList.add('esconder');
+        document.getElementById('div-enviados').classList.add('esconder');
         //IDs de nav items
         document.getElementById('nav-usuario').classList.add('esconder');
         document.getElementById('nav-matprim').classList.add('esconder');
@@ -212,6 +222,7 @@
         document.getElementById('div-prodter').classList.add('esconder');
         document.getElementById('div-compras_llegar').classList.add('esconder');
         document.getElementById('div-compras_confir').classList.add('esconder');
+        document.getElementById('div-enviados').classList.add('esconder');
         //IDs de nav items
         document.getElementById('nav-usuario').classList.add('esconder');
         document.getElementById('nav-clientes').classList.add('esconder');

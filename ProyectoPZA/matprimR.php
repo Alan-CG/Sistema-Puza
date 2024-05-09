@@ -110,7 +110,7 @@
                     <a class="btn btn-primary bi bi-pencil-square" href="matprimU.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
                   </td>
                   <td>
-                    <a id="eliminar-btn1" class="" class="btn btn-danger bi bi-trash3-fill" href="model/borrarmatprimbd.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
+                    <a id="eliminar-btn1" class="btn btn-danger bi bi-trash3-fill" href="model/borrarmatprimbd.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
                   </td>
                 </tr>
               <?php endforeach; ?>
@@ -120,18 +120,13 @@
         </div>
       </div>
     </div>
-    <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
+    <span id="usuario" class=""><?php echo $_SESSION['rol_usuario']; ?></span>
 
     <script>
       var tipo_usuario = document.getElementById('usuario').innerText;
       if(tipo_usuario=="2"){
-        
         document.getElementById('eliminar-btn').classList.add('esconder');
-       
         document.getElementById('eliminar-btn1').classList.add('esconder');
-
-        
-        
         document.getElementById('nav-productos').classList.add('esconder');
         document.getElementById('nav-clientes').classList.add('esconder');
         document.getElementById('nav-proveedores').classList.add('esconder');
@@ -140,7 +135,7 @@
         document.getElementById('nav-produccion').classList.add('esconder');
       }
           
-      </script>
+    </script>
 
 
 </body>
