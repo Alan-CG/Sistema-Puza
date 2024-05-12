@@ -15,7 +15,7 @@ $codigo = isset($_REQUEST['IDproducto']) ? $_REQUEST['IDproducto'] : null;
 //FROM materias_primas INNER JOIN proveedores ON materias_primas.IDproveedor = proveedores.IDproveedor
 //WHERE materias_primas.EstadoMateria = 1 ORDER BY IDproveedor ASC;');
 
-$miConsulta = $miPDO->prepare('SELECT formula_producto.*,productos.NombreProducto,materias_primas.NombreMateria FROM 
+$miConsulta = $miPDO->prepare('SELECT formula_producto.*,productos.*,materias_primas.* FROM 
 formula_producto 
 INNER JOIN productos ON formula_producto.ID_Producto = productos.IDproducto 
 INNER JOIN materias_primas ON formula_producto.ID_Materia=materias_primas.IDmateriaprima 

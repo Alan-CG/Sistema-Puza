@@ -71,23 +71,27 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                    <th scope="col">ID Formula</th>
-                    <th scope="col">ID Materia</th>
-                    <th scope="col">ID Producto</th>
-                    <th scope="col">Cantidad Insumo</th>
-                    <th scope="col">Nombre Producto</th>
-                    <th scope="col">Nombre Materia</th>
+                    <th hidden scope="col">ID Formula</th>
+                    <th hidden scope="col">ID Materia</th>
+                    <th hidden scope="col">ID Producto</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Materia prima</th>
+                    <th scope="col">Cantidad utilizada</th>
+                    <th scope="col">Costo Unitario</th>
+                    <th scope="col">Existencias</th>
                 </tr>
               </thead>
               <tbody>
                 <?php foreach ($miConsulta as $clave => $dato): ?>
                  <tr>
-                     <td><?=$dato['ID_Formula'] ?></td>
-                     <td><?=$dato['ID_Materia'] ?></td>
-                     <td><?=$dato['ID_Producto'] ?></td>
-                     <td><?=$dato['Cantidad_insumo'] ?></td>
+                     <td hidden><?=$dato['ID_Formula'] ?></td>
+                     <td hidden><?=$dato['ID_Materia'] ?></td>
+                     <td hidden><?=$dato['ID_Producto'] ?></td>
                      <td><?=$dato['NombreProducto'] ?></td>
                      <td><?=$dato['NombreMateria'] ?></td>
+                     <td><?=$dato['Cantidad_insumo'] ?></td>
+                     <td><?=$dato['CostoMateria'] ?></td>
+                     <td><?=$dato['ExistenciasMateria'] ?></td>
                  </tr>
                 <?php endforeach; ?>
               </tbody>
