@@ -134,6 +134,8 @@
         document.getElementById('nav-produccion').classList.add('esconder');
         
         document.getElementById('eliminar-btn1').classList.add('esconder');
+
+        //nuevo pedazo de código para ocultar botones
         var botonesEliminar = document.querySelectorAll('.eliminar-btn1');
         botonesEliminar.forEach(function(boton) {
           boton.classList.add('esconder');
