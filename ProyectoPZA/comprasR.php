@@ -36,7 +36,7 @@
         <p class="lead">Sistema de inventario</p>
       </div>
     </div>
-    <nav class="nav navbar-expand-sm">
+    <nav class="nav navbar-expand-sm shadow">
       <a class="nav-link active" href="menu.php">Menú</a>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -70,13 +70,15 @@
   <br>
   <div class="container">
     <h4 class="text-center">Compras</h4>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <div class="form-row">
       <div class="form-group col">
-        <a class="btn btn-primary" href="comprasC.php">Nueva compra</a>
+        <a class="btn btn-primary shadow-sm" href="comprasC.php">Nueva compra</a>
       </div>
     </div>
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped">
+    <div class="row w-100 align-items-center table-responsive-md">
+    <div class="col text-center table-responsive">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th hidden scope="col">IDregistro</th>
@@ -106,7 +108,7 @@
                 <?= $valor['Total_compra']; ?>
               </td>
               <td>
-                <a class="bi bi-plus-square btn btn-success"
+                <a class="bi bi-plus-square btn btn-success shadow-sm"
                   href="compras_matR.php?IDRegistro_compra=<?= $valor['IDRegistro_compra'] ?>"></a>
               </td>
             </tr>
@@ -114,11 +116,13 @@
         </tbody>
       </table>
     </div>
-    <div class="row w-100 align-items-center">
-      <div class="col text-center">
-        <a href="menu.php" class="btn btn-primary">Regresar</a>
-      </div>
     </div>
+    </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
+            </div>
+      </div>
   </div>
   <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
   <script>

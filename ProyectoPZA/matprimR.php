@@ -28,7 +28,7 @@
               <p class="lead">Sistema de inventario</p>
             </div>
         </div>
-        <nav class="nav navbar-expand-sm">
+        <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -61,9 +61,10 @@
  </header>
     <div class="container">
       <h3 class="text-center"> Lista de materias primas</h3>
+      <div class="card card-default border-light shadow p-3 mb-5">
       <div class="form-row">
          <div class="form-group col">
-           <a href="matprimC.php" class="btn btn-success">Registrar Materia Prima</a> 
+           <a href="matprimC.php" class="btn btn-success shadow-sm">Registrar Materia Prima</a> 
         </div>
       </div>
       <div class="row w-100 align-items-center table-responsive-md">
@@ -107,17 +108,22 @@
                     <?= $valor['Fecha_entradaMateria']; ?>
                   </td>
                   <td>
-                    <a class="btn btn-primary bi bi-pencil-square" href="matprimU.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
+                    <a class="btn btn-primary bi bi-pencil-square shadow-sm" href="matprimU.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
                   </td>
                   <td>
-                    <a id="eliminar-btn1"class="btn btn-danger bi bi-trash3-fill eliminar-btn1" href="model/borrarmatprimbd.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
+                    <a id="eliminar-btn1"class="btn btn-danger bi bi-trash3-fill eliminar-btn1 shadow-sm" href="model/borrarmatprimbd.php?IDmateriaprima=<?= $valor['IDmateriaprima'] ?>"></a>
                   </td>
                 </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
-          <a href="menu.php" class="bi bi-arrow-return-left btn btn-primary"></a> 
         </div>
+      </div>
+      </div>
+      <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
       </div>
     </div>
     <span id="usuario" class=""><?php echo $_SESSION['rol_usuario']; ?></span>

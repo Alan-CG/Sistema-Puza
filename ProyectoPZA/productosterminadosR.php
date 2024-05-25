@@ -35,7 +35,7 @@
                 <p class="lead">Sistema de inventario</p>
             </div>
         </div>
-        <nav class="nav navbar-expand-sm">
+        <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -69,8 +69,10 @@
     <br>
     <div class="container">
         <h4 class="text-center">Productos Terminados</h4>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
+        <div class="card card-default border-light shadow p-3 mb-5">
+            <div class="row w-100 align-items-center table-responsive-md">
+            <div class=" col text-center table-responsive">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th hidden scope="col">IDProductoTerminado</th>
@@ -104,14 +106,16 @@
                             <?= $dato['Cantidad']; ?>
                         </td>
                         <td>
-                            <a class="btn btn-primary bi bi-clipboard-check-fill" href="model/confirmaenvio.php?IDProductoTerminado=<?= $dato['IDProductoTerminado'] ?>"></a>
+                            <a class="btn btn-primary bi bi-clipboard-check-fill shadow-sm" href="model/confirmaenvio.php?IDProductoTerminado=<?= $dato['IDProductoTerminado'] ?>"></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-        <div class="row w-100 align-items-center">
+            </div>
+        </div>
+        <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
             <div class="col text-center">
                 <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
             </div>

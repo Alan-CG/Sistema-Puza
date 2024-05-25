@@ -26,7 +26,7 @@
               <p class="lead">Sistema de inventario</p>
             </div>
         </div>
-        <nav class="nav navbar-expand-sm">
+        <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -62,110 +62,110 @@
     <div class="container">
         <div class="row">
             <div id="div-usuario" class="col-sm-4">
-              <div class="card">
+              <div class="card shadow-sm">
                 <div class="card-body">
                   <h5 class="card-title">Usuarios</h5>
                   <p class="card-text">Acceder a los registros de usuarios</p>
-                  <a href="usuariosR.php" class="btn btn-primary">Acceder</a>
+                  <a href="usuariosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                 </div>
               </div>
             </div>
             <div id="div-materiasprimas" class="col-sm-4">
-              <div class="card">
+              <div class="card shadow-sm">
                 <div class="card-body">
                   <h5 class="card-title">Materias primas</h5>
                   <p class="card-text">Acceder a la base de datos de materias primas</p>
-                  <a href="matprimR.php" class="btn btn-primary">Acceder</a>
+                  <a href="matprimR.php" class="btn btn-primary shadow-sm">Acceder</a>
                 </div>
               </div>
             </div>
             <div id="div-productos" class="col-sm-4">
-              <div class="card">
+              <div class="card shadow-sm">
                 <div class="card-body">
                   <h5 class="card-title">Productos</h5>
                   <p class="card-text">Acceder a los registros de datos de productos</p>
-                  <a href="productosR.php" class="btn btn-primary">Acceder</a>
+                  <a href="productosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                 </div>
               </div>
             </div>
             <div id="div-clientes" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Clientes</h5>
                     <p class="card-text">Acceder a la base de datos de clientes</p>
-                    <a href="clienteR.php" class="btn btn-primary">Acceder</a>
+                    <a href="clienteR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
               <div id="div-proveedores" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Proveedores</h5>
                     <p class="card-text">Acceder a la base de datos de proveedores</p>
-                    <a href="proveedoresR.php" class="btn btn-primary">Acceder</a>
+                    <a href="proveedoresR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
               <div id="div-prodter" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Productos Terminados</h5>
                     <p class="card-text">Acceder a los registros de productos terminados</p>
-                    <a href="productosterminadosR.php" class="btn btn-primary">Acceder</a>
+                    <a href="productosterminadosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
               <div id="div-enviados" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Productos Enviados</h5>
                     <p class="card-text">Acceder a los registros de productos enviados</p>
-                    <a href="productosenviadosR.php" class="btn btn-primary">Acceder</a>
+                    <a href="productosenviadosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
               <div id="div-compras_llegar" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Compras por llegar</h5>
                     <p class="card-text">Acceder a los registros de compras por llegar</p>
-                    <a href="compras_llegaR.php" class="btn btn-primary">Acceder</a>
+                    <a href="compras_llegaR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
               <div id="div-compras_confir" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Compras confirmadas</h5>
                     <p class="card-text">Acceder a los registros de compras confirmadas</p>
-                    <a href="compras_confiR.php" class="btn btn-primary">Acceder</a>
+                    <a href="compras_confiR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
               <div id="div-compras" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Compras</h5>
                     <p class="card-text">Acceder a los registros de compras</p>
-                    <a href="comprasR.php" class="btn btn-primary">Acceder</a>
+                    <a href="comprasR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
               <div id="div-pedidos" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Pedidos</h5>
                     <p class="card-text">Acceder a los registros de pedidos</p>
-                    <a href="pedidosR.php" class="btn btn-primary">Acceder</a>
+                    <a href="pedidosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
               <div id="div-produccion" class="col-sm-4">
-                <div class="card">
+                <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Producción</h5>
                     <p class="card-text">Acceder al modulo de producción</p>
-                    <a href="produccionR.php" class="btn btn-primary">Acceder</a>
+                    <a href="produccionR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>

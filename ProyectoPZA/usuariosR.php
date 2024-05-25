@@ -28,7 +28,7 @@
         <p class="lead">Sistema de inventario</p>
       </div>
     </div>
-    <nav class="nav navbar-expand-sm">
+    <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -61,12 +61,13 @@
   </header>
   <div class="container">
     <h3 class="text-center">Lista de Usuarios</h3>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <div class="form-row">
       <div class="form-group col">
-         <a href="usuariosC.php" class="btn btn-success">Crear Nuevo Usuario</a> 
+         <a href="usuariosC.php" class="btn btn-success shadow-sm">Crear Nuevo Usuario</a> 
       </div>
     </div>
-     <div class="row w-100 align-items-center ">
+    <div class="row w-100 align-items-center ">
         <div class="col text-center">
           <table class="table-responsive table table-striped">
             <thead>
@@ -103,18 +104,23 @@
                   <?= $valor['Fecha_creacion']; ?>
                 </td>
                 <td>
-                  <a class="btn btn-primary bi bi-pencil-square" href="usuariosU.php?IDusuario=<?= $valor['IDusuario'] ?>"></a>
+                  <a class="btn btn-primary bi bi-pencil-square shadow-sm" href="usuariosU.php?IDusuario=<?= $valor['IDusuario'] ?>"></a>
                 </td>
                 <td>
-                  <a class="btn btn-danger bi bi-trash3-fill" href="model/borrarusuariobd.php?IDusuario=<?= $valor['IDusuario'] ?>"></a>
+                  <a class="btn btn-danger bi bi-trash3-fill shadow-sm" href="model/borrarusuariobd.php?IDusuario=<?= $valor['IDusuario'] ?>"></a>
                 </td>
               </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
-          <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
         </div>
       </div>
+    </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+    <div class="col text-center">
+      <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
+    </div>
+    </div>
   </div>
 
 

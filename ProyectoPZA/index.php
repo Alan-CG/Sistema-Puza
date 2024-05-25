@@ -14,7 +14,7 @@
 <body>
 
  <header>
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid shadow p-3 mb-5">
             <div class="container">
               <h1 class="display-4">Puza</h1>
               <p class="lead">Sistema de inventario</p>
@@ -28,8 +28,9 @@
           <h2></h2>
         </section>
         <section class="col-4">
-        <h2 class="title" >Bienvenido</h2>
-          <form action="" method="post">
+        <div class="card card-default border-light shadow p-3 mb-5">
+        <h2 class="title text-center" >Bienvenido</h2>
+        <form action="" method="post">
            <?php include 'model/conexionlogin.php' ?>
            <?php include 'model/controlador.php' ?>
             <div class="form-group">
@@ -45,6 +46,8 @@
             <!--<a href="menu.php" class="btn btn-primary">Iniciar sesión</a>-->
             <input name = "btnlogin" type="submit" class="btn btn-primary" value="Acceder">
           </form>
+        </div>
+          
         </section>
         <section class="col-4"></section>
       </section>

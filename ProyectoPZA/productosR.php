@@ -28,7 +28,7 @@
         <p class="lead">Sistema de inventario</p>
       </div>
     </div>
-    <nav class="nav navbar-expand-sm">
+    <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -61,13 +61,14 @@
   </header>
   <div class="container">
     <h3 class="text-center">Lista de Productos</h3>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <div class="form-row">
       <div class="form-group col">
-         <a href="formulaprodC.php" class="btn btn-success">Crear Nuevo Producto</a> 
+         <a href="formulaprodC.php" class="btn btn-success shadow-sm">Crear Nuevo Producto</a> 
       </div>
     </div>
-     <div class="row w-100 align-items-center ">
-        <div class="col text-center">
+    <div class="row w-100 align-items-center ">
+        <div class="col text-center  table-responsive">
           <table class="table table-striped">
             <thead>
               <tr>
@@ -100,20 +101,25 @@
                   $<?= $valor['PrecioProducto']; ?>
                 </td>
                 <td>
-                  <a class="btn btn-primary bi bi-plus-square" href="productos_matR.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
+                  <a class="btn btn-primary bi bi-plus-square shadow-sm" href="productos_matR.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
                 </td>
                 <td>
-                  <a class="btn btn-primary bi bi-pencil-square" href="productosU.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
+                  <a class="btn btn-primary bi bi-pencil-square shadow-sm" href="productosU.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
                 </td>
                 <td>
-                  <a class="btn btn-danger bi bi-trash3-fill" href="model/borrarprodbd.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
+                  <a class="btn btn-danger bi bi-trash3-fill shadow-sm" href="model/borrarprodbd.php?IDproducto=<?= $valor['IDproducto'] ?>"></a>
                 </td>
               </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
-          <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
         </div>
+      </div>
+    </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left"></a>
+            </div>
       </div>
   </div>
 

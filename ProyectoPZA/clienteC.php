@@ -29,6 +29,7 @@
   <div class="container">
     <br>
     <h4 class="text-center">Registrar Cliente</h4>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <form action="model/altacliente.php" method="POST" class="needs-validation" novalidate>
     <div class="form-row">
         <div class="form-group col-md-4">
@@ -39,7 +40,7 @@
         </div>
         <div class="form-group col-md-4">
           <label for="input_rfc">RFC</label>
-          <input type="text" class="form-control" id="input_rfc" name="input_rfc"
+          <input maxlength="13" minlength="13" type="text" class="form-control" id="input_rfc" name="input_rfc"
             placeholder="RFC del cliente" required>
           <div class="invalid-feedback">Rellena el campo correctamente</div> 
         </div>
@@ -86,15 +87,16 @@
     </div>
     <div class="form-row">
           <div class="form-group col-md-4">
-            <input type="submit" class="btn btn-primary" name="submit">
+            <button type="submit" class="btn btn-primary" name="submit">Registrar</button>
           </div>
         </div>
     </form>
-    <div class="row w-100 align-items-center">
-      <div class="col text-center">
-        <a href="clienteR.php" class="btn btn-primary">Regresar</a>
-      </div>
     </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="clienteR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
+      </div>
   </div>                                  
 </body>
 

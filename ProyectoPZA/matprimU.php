@@ -30,7 +30,9 @@
     </div>
   </header>
   <div class="container">
+    <br>
     <h4 class="text-center">Actualizar inventario</h4>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <form method="post" class="needs-validation" novalidate>
       <div class="form-row">
         <div class="form-group col-md-6">
@@ -86,13 +88,14 @@
         </div>
       </div>
       <input type="hidden" name="IDmateriaprima" value="<?= $codigo ?>">
-      <button type="submit" class="btn btn-primary">Actualizar la base de datos</button>
+      <button type="submit" class="btn btn-primary shadow-sm">Actualizar</button>
     </form>
-    <div class="row w-100 align-items-center">
-      <div class="col text-center">
-        <a href="matprimR.php" class="btn btn-primary">Regresar</a>
-      </div>
     </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="matprimR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
+      </div>
   </div>
   <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields

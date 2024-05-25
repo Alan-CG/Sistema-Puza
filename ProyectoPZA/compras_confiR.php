@@ -29,7 +29,7 @@
               <p class="lead">Sistema de inventario</p>
             </div>
         </div>
-        <nav class="nav navbar-expand-sm">
+        <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -62,6 +62,7 @@
  </header>
     <div class="container">
       <h3 class="text-center">Compras confirmadas</h3>
+      <div class="card card-default border-light shadow p-3 mb-5">
       <div class="row w-100 align-items-center table-responsive-md">
         <div class="col text-center">
           <table class="table table-striped">
@@ -91,17 +92,22 @@
                     <?= $valor['Fecha_Entrada']; ?>
                   </td>
                   <td>
-                    <?= $valor['Total_compra']; ?>
+                    $ <?= $valor['Total_compra']; ?>
                   </td>
                   <td>
-                    <a class="btn btn-primary bi bi-plus-square-fill" href="compra_confir_llega_mat.php?IDRegistro_compra=<?= $valor['IDRegistro_compra'] ?>"></a>
+                    <a class="btn btn-primary bi bi-plus-square shadow" href="compra_confir_llega_mat.php?IDRegistro_compra=<?= $valor['IDRegistro_compra'] ?>"></a>
                   </td>
                 </tr>
               <?php endforeach; ?>
             </tbody>
           </table>
-          <a href="menu.php" class="bi bi-arrow-return-left btn btn-primary"></a> 
         </div>
+      </div>
+      </div>
+      <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
       </div>
     </div>
     <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>

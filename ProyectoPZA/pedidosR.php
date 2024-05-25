@@ -35,7 +35,7 @@
                 <p class="lead">Sistema de inventario</p>
             </div>
         </div>
-        <nav class="nav navbar-expand-sm">
+        <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -69,13 +69,15 @@
     <br>
     <div class="container">
         <h4 class="text-center">Pedidos</h4>
+        <div class="card card-default border-light shadow p-3 mb-5">
         <div class="form-row">
             <div class="form-group col">
-                <a class="btn btn-primary" href="pedidosC.php">Nuevo pedido</a>
+                <a class="btn btn-primary shadow-sm" href="pedidosC.php">Nuevo pedido</a>
             </div>
         </div>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
+        <div class="row w-100 align-items-center table-responsive-md">
+        <div class="col text-center">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th hidden scope="col">IDpedido</th>
@@ -102,19 +104,21 @@
                             <?= $dato['NombreCliente']; ?>
                         </td>
                         <td>
-                            $<?= $dato['TotalPedido']; ?>
+                            $ <?= $dato['TotalPedido']; ?>
                         </td>
                         <td>
-                            <a class="btn btn-primary bi bi-plus-square" href="pedidos_detallesR.php?IDPedido=<?= $dato['IDPedido'] ?>"></a>
+                            <a class="btn btn-primary bi bi-plus-square shadow-sm" href="pedidos_detallesR.php?IDPedido=<?= $dato['IDPedido'] ?>"></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-        <div class="row w-100 align-items-center">
+        </div>
+        </div>
+        <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
             <div class="col text-center">
-                <a href="menu.php" class="btn btn-primary">Regresar</a>
+                <a href="menu.php" class="btn btn-primary bi bi-arrow-return-left shadow-sm"></a>
             </div>
         </div>
     </div>
