@@ -77,7 +77,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Nombre de Usuario</th>
                 <th scope="col">Contraseña</th>
-                <th scope="col">Fecha de creación</th>
+                <th scope="col">Fecha de Creación</th>
                 <th scope="col">Modificar Datos</th>
                 <th scope="col">Eliminar Usuario</th>
               </tr>

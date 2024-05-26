@@ -32,6 +32,7 @@
   <br>
   <div class="container">
     <h4 class="text-center">Modificar Productos</h4>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <form action="model/modificarproducto.php" method="POST" class="needs-validation" novalidate>
       <div class="form-row">
           <div class="form-group col-sm-3">
@@ -68,12 +69,13 @@
             </div>
           </div>
           <input type="hidden" name="IDproducto" value="<?= $codigo ?>">
-          <button type="submit" class="btn btn-success">Guardar</button>
+          <button type="submit" class="btn btn-success">Actualizar</button>
     </form>
-    <div class="row w-100 align-items-center">
-      <div class="col text-center">
-        <a href="productosR.php" class="btn btn-primary">Regresar</a>
-      </div>
+    </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="productosR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
     </div>
   </div>
   <script>

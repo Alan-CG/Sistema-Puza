@@ -28,7 +28,7 @@
                 <p class="lead">Sistema de inventario</p>
             </div>
         </div>
-        <nav class="nav navbar-expand-sm">
+        <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -62,13 +62,10 @@
     <br>
     <div class="container">
         <h4 class="text-center">Pedidos</h4>
-        <div class="form-row">
-            <div class="form-group col">
-                <a class="btn btn-primary" href="pedidosC.php">Nuevo pedido</a>
-            </div>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
+        <div class="card card-default border-light shadow p-3 mb-5">
+            <div class="row w-100 align-items-center table-responsive-md">
+            <div class="col text-center">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th hidden scope="col">IDPedidoProducto</th>
@@ -93,11 +90,13 @@
                 </tbody>
             </table>
         </div>
-        <div class="row w-100 align-items-center">
-            <div class="col text-center">
-                <a href="pedidosR.php" class="btn btn-primary">Regresar</a>
             </div>
         </div>
+        <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="pedidosR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
+      </div>
     </div>
 
 </body>

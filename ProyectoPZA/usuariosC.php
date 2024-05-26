@@ -31,6 +31,7 @@
   <br>
   <div class="container">
     <h4 class="text-center">Crear Nuevo Usuario</h4>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <form action="model/altausuario.php" method="POST" class="needs-validation" novalidate>
       <div class="form-row">
         <div class="form-group col-md-4">
@@ -72,10 +73,11 @@
       </div>
       <button type="submit" class="btn btn-primary">Registrar</button>
     </form>
-    <div class="row w-100 align-items-center">
-      <div class="col text-center">
-        <a href="usuariosR.php" class="btn btn-primary">Regresar</a>
-      </div>
+    </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+    <div class="col text-center">
+      <a href="usuariosR.php" class="btn btn-primary bi bi-arrow-return-left"></a>
+    </div>
     </div>
   </div>
   <script>

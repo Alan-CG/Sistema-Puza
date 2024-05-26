@@ -41,6 +41,7 @@
   <br>
   <div class="container">
     <h4 class="text-center">Registro de pedidos</h4>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <form action="model/altapedido.php" method="POST" class="needs-validation" novalidate>
         <h5>Datos Generales</h5>
         <div class="form-row">
@@ -90,11 +91,12 @@
         <button type="submit" class="btn btn-primary">Registrar</button>
       </div>
     </form>
-    <div class="row w-100 align-items-center">
-      <div class="col text-center">
-      <a href="pedidosR.php" class="btn btn-primary">Regresar</a>
     </div>
-  </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="pedidosR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
+      </div>
 </div>
   <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields

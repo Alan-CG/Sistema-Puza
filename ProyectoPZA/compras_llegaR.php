@@ -71,8 +71,8 @@
               <th hidden scope="col">IDregistro</th>
                     <th scope="col">Folio</th>
                     <th scope="col">Proveedor</th>
-                    <th scope="col">Fecha de pedido</th>
-                    <th scope="col">Total de compra</th>
+                    <th scope="col">Fecha de Pedido</th>
+                    <th scope="col">Total de Compra</th>
                     <th scope="col">Detalles</th>
               </tr>
             </thead>

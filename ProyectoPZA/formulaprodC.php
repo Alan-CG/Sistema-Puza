@@ -43,6 +43,7 @@
     <div class="container">
         <h4 class="text-center">Alta de Nuevo Producto</h4>
         <br>
+        <div class="card card-default border-light shadow p-3 mb-5">
         <form action="model/altaproductos.php" method="POST" class="needs-validation" novalidate>
             <h5 class="text-align-left">Datos básicos del producto</h5>
             <div class="form-row">
@@ -57,9 +58,9 @@
                     <div class="invalid-feedback">Rellena el campo correctamente</div>
                 </div>
                 <div class="col-sm-2">
-                    <label for="input_ganancia">Utilidad</label>
-                    <input type="number" class="form-control" id="input_ganancia" placeholder="Introduce el porcentaje de ganancia" name="input_ganancia" required>
-                    <div class="invalid-feedback">Rellena el campo correctamente</div>
+                    <label for="input_ganancia">Utilidad(%)</label>
+                    <input pattern="[0-9]+" min="1" step="1" type="number" class="form-control" id="input_ganancia" placeholder="Introduce el porcentaje de ganancia" name="input_ganancia" required>
+                    <div class="invalid-feedback">Solo se admiten numeros enteros.</div>
                 </div>
             </div>
             <br>
@@ -70,7 +71,7 @@
             <h5 class="text-align-left">Formula del producto</h5>
             <div class="row">
                 <div class="col">
-                    <button id="agregar" class="btn btn-primary">Agregar Materia Prima</button>
+                    <button id="agregar" class="btn btn-primary shadow-sm">Agregar Materia Prima</button>
                 </div>
             </div>
             <br> 
@@ -93,16 +94,17 @@
             <div id="contenedor"></div>
             <div class="form-row">
                 <div class="col-md-12">
-                    <button  type="submit" class="btn btn-primary">Registrar</button>
+                    <button  type="submit" class="btn btn-primary shadow-sm">Registrar</button>
                 </div>
             </div>
 
         </form>
-        <div class="row w-100 align-items-center">
-            <div class="col text-center">
-                <a href="productosR.php" class="btn btn-primary">Regresar</a>
-            </div>
         </div>
+        <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="productosR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
+      </div>
     </div>
 
     

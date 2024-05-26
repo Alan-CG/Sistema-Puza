@@ -20,7 +20,7 @@
               <p class="lead">Sistema de inventario</p>
             </div>
         </div>
-        <nav class="nav navbar-expand-sm">
+        <nav class="nav navbar-expand-sm shadow">
           <a class="nav-link active" href="menu.php">Menú</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -53,13 +53,14 @@
  </header>
     <div class="container">
       <h3 class="text-center">Compras confirmadas</h3>
+      <div class="card card-default border-light shadow p-3 mb-5">
       <div class="row w-100 align-items-center table-responsive-md">
         <div class="col text-center">
           <table class="table table-striped">
             <thead>
               <tr>
               <th hidden scope="col">IDregistro</th>
-                    <th scope="col">Folio de compra</th>
+                    <th scope="col">Folio de Compra</th>
                     <th scope="col">Fecha</th>
                     <th scope="col">Materia</th>
                     <th scope="col">Costo Unitario</th>
@@ -94,8 +95,13 @@
               <?php endforeach; ?>
             </tbody>
           </table>
-          <a href="compras_confiR.php" class="bi bi-arrow-return-left btn btn-primary"></a> 
         </div>
+      </div>
+      </div>
+      <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="compras_confiR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
       </div>
     </div>
 </body>

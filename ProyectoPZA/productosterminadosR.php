@@ -81,7 +81,7 @@
                         <th scope="col">Cliente</th>
                         <th scope="col">Producto</th>
                         <th scope="col">Cantidad</th>
-                        <th scope="col">Confirmar envío</th>
+                        <th scope="col">Confirmar Envío</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -41,6 +41,7 @@
   <div class="container">
     <br>
     <h4 class="text-center">Registrar Proveedor</h4>
+    <div class="card card-default border-light shadow p-3 mb-5">
     <div class="form-row">
       <div class="form-group col-sm-3">
         <label for="rfc_des">¿Es persona física o moral?</label>
@@ -137,13 +138,14 @@
         </div>
       </div>
       <div class="form-row">
-        <input type="submit" class="btn btn-primary" name="submit">
+        <button type="submit" class="btn btn-primary shadow" name="submit">Registrar</button>
       </div>
     </form>
-    <div class="row w-100 align-items-center">
-      <div class="col text-center">
-        <a href="proveedoresR.php" class="btn btn-primary">Regresar</a>
-      </div>
+    </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="proveedoresR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
     </div>
   </div>
 

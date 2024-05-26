@@ -69,7 +69,7 @@
                     <tr>
                         <th hidden scope="col">IDpedido</th>
                         <th scope="col">Folio</th>
-                        <th scope="col">Fecha del pedido</th>
+                        <th scope="col">Fecha del Pedido</th>
                         <th scope="col">Cliente</th>
                         <th scope="col">Total</th>
                         <th scope="col">Detalles</th>

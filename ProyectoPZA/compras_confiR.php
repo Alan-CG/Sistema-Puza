@@ -61,7 +61,7 @@
         </nav>
  </header>
     <div class="container">
-      <h3 class="text-center">Compras confirmadas</h3>
+      <h3 class="text-center">Compras Confirmadas</h3>
       <div class="card card-default border-light shadow p-3 mb-5">
       <div class="row w-100 align-items-center table-responsive-md">
         <div class="col text-center">
@@ -71,8 +71,8 @@
                     <th hidden scope="col">IDregistro</th>
                     <th scope="col">Folio</th>
                     <th scope="col">Proveedor</th>
-                    <th scope="col">Fecha de pedido</th>
-                    <th scope="col">Total de compra</th>
+                    <th scope="col">Fecha de Pedido</th>
+                    <th scope="col">Total de Compra</th>
                     <th scope="col">Detalles</th>
               </tr>
             </thead>

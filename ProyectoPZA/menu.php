@@ -65,7 +65,7 @@
               <div class="card shadow-sm">
                 <div class="card-body">
                   <h5 class="card-title">Usuarios</h5>
-                  <p class="card-text">Acceder a los registros de usuarios</p>
+                  <p class="card-text">Acceder al modulo de Usuarios</p>
                   <a href="usuariosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                 </div>
               </div>
@@ -74,7 +74,7 @@
               <div class="card shadow-sm">
                 <div class="card-body">
                   <h5 class="card-title">Materias primas</h5>
-                  <p class="card-text">Acceder a la base de datos de materias primas</p>
+                  <p class="card-text">Acceder al modulo de Materias primas</p>
                   <a href="matprimR.php" class="btn btn-primary shadow-sm">Acceder</a>
                 </div>
               </div>
@@ -83,7 +83,7 @@
               <div class="card shadow-sm">
                 <div class="card-body">
                   <h5 class="card-title">Productos</h5>
-                  <p class="card-text">Acceder a los registros de datos de productos</p>
+                  <p class="card-text">Acceder al modulo de Productos</p>
                   <a href="productosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                 </div>
               </div>
@@ -92,7 +92,7 @@
                 <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Clientes</h5>
-                    <p class="card-text">Acceder a la base de datos de clientes</p>
+                    <p class="card-text">Acceder al modulo de Clientes</p>
                     <a href="clienteR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
@@ -101,7 +101,7 @@
                 <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Proveedores</h5>
-                    <p class="card-text">Acceder a la base de datos de proveedores</p>
+                    <p class="card-text">Acceder al modulo de Proveedores</p>
                     <a href="proveedoresR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
@@ -110,7 +110,7 @@
                 <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Productos Terminados</h5>
-                    <p class="card-text">Acceder a los registros de productos terminados</p>
+                    <p class="card-text">Acceder al modulo de Productos Terminados</p>
                     <a href="productosterminadosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
@@ -119,8 +119,17 @@
                 <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Productos Enviados</h5>
-                    <p class="card-text">Acceder a los registros de productos enviados</p>
+                    <p class="card-text">Acceder al modulo de Productos Enviados</p>
                     <a href="productosenviadosR.php" class="btn btn-primary shadow-sm">Acceder</a>
+                  </div>
+                </div>
+              </div>
+              <div id="div-compras" class="col-sm-4">
+                <div class="card shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">Compras</h5>
+                    <p class="card-text">Acceder al modulo de Compras</p>
+                    <a href="comprasR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
@@ -128,7 +137,7 @@
                 <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Compras por llegar</h5>
-                    <p class="card-text">Acceder a los registros de compras por llegar</p>
+                    <p class="card-text">Acceder al modulo de Compras por llegar</p>
                     <a href="compras_llegaR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
@@ -137,17 +146,8 @@
                 <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Compras confirmadas</h5>
-                    <p class="card-text">Acceder a los registros de compras confirmadas</p>
+                    <p class="card-text">Acceder al modulo de Compras Confirmadas</p>
                     <a href="compras_confiR.php" class="btn btn-primary shadow-sm">Acceder</a>
-                  </div>
-                </div>
-              </div>
-              <div id="div-compras" class="col-sm-4">
-                <div class="card shadow-sm">
-                  <div class="card-body">
-                    <h5 class="card-title">Compras</h5>
-                    <p class="card-text">Acceder a los registros de compras</p>
-                    <a href="comprasR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
               </div>
@@ -155,7 +155,7 @@
                 <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Pedidos</h5>
-                    <p class="card-text">Acceder a los registros de pedidos</p>
+                    <p class="card-text">Acceder al modulo de Pedidos</p>
                     <a href="pedidosR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>
@@ -164,7 +164,7 @@
                 <div class="card shadow-sm">
                   <div class="card-body">
                     <h5 class="card-title">Producción</h5>
-                    <p class="card-text">Acceder al modulo de producción</p>
+                    <p class="card-text">Acceder al modulo de Producción</p>
                     <a href="produccionR.php" class="btn btn-primary shadow-sm">Acceder</a>
                   </div>
                 </div>

@@ -78,7 +78,7 @@
                 <th scope="col">Proveedor</th>
                 <th scope="col">Costo</th>
                 <th scope="col">Existencias</th>
-                <th scope="col">Fecha de entrada</th>
+                <th scope="col">Fecha de Entrada</th>
                 <th scope="col">Modificar</th>
                 <th id="eliminar-btn" scope="col">Eliminar</th>
               </tr>

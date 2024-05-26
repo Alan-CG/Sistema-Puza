@@ -76,7 +76,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Descripcion</th>
                 <th scope="col">Costo</th>
-                <th scope="col">Precio de venta</th>
+                <th scope="col">Precio de Venta</th>
                 <th scope="col">Materiales</th>
                 <th scope="col">Modificar</th>
                 <th scope="col">Eliminar</th>

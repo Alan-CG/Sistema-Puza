@@ -61,12 +61,8 @@
   </header>
   <div class="container">
     <h3 class="text-center">Lista de Materias Primas</h3>
-      <div class="form-row">
-        <div class="form-group col">
-           <a href="formulaprodC.php" class="btn btn-success">Crear Nuevo Producto</a> 
-        </div>
-      </div>
-       <div class="row w-100 align-items-center ">
+    <div class="card card-default border-light shadow p-3 mb-5">
+    <div class="row w-100 align-items-center ">
           <div class="col text-center">
             <table class="table table-striped">
               <thead>
@@ -96,8 +92,14 @@
                 <?php endforeach; ?>
               </tbody>
             </table>
-          <a href="productosR.php" class="btn btn-primary bi bi-arrow-return-left"></a>
         </div>
+    </div>
+    </div>
+    <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="productosR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
+    </div>
   </div>
 
 

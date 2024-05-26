@@ -61,14 +61,11 @@
     </header>
     <br>
     <div class="container">
-        <h4 class="text-center">Pedidos</h4>
-        <div class="form-row">
-            <div class="form-group col">
-                <a class="btn btn-primary" href="pedidosC.php">Nuevo pedido</a>
-            </div>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
+        <h4 class="text-center">Productos por producir</h4>
+        <div class="card card-default border-light shadow p-3 mb-5">
+            <div class="row w-100 align-items-center table-responsive-md">
+            <div class="col text-center">
+            <table class="table table-striped">
                 <thead>
                     <tr>
                         <th hidden scope="col">IDPedidoProducto</th>
@@ -90,18 +87,20 @@
                             <?= $dato['Cantidad']; ?>
                         </td>
                         <td>
-                            <a class="btn btn-primary bi bi-plus-square" href="model/actualiza_stock_producto.php?IDPedidoProducto=<?= $dato['IDPedidoProducto'] ?>"></a>
+                            <a class="btn btn-primary bi bi-clipboard2-check" href="model/actualiza_stock_producto.php?IDPedidoProducto=<?= $dato['IDPedidoProducto'] ?>"></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-        <div class="row w-100 align-items-center">
-            <div class="col text-center">
-                <a href="produccionR.php" class="btn btn-primary">Regresar</a>
             </div>
         </div>
+        <div style="padding-bottom:0.5cm" class="row w-100 align-items-center">
+            <div class="col text-center">
+                <a href="produccionR.php" class="btn btn-primary bi bi-arrow-return-left shadow"></a>
+            </div>
+      </div>
     </div>
 
 </body>
