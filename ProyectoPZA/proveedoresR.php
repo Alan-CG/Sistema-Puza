@@ -60,7 +60,7 @@
               <a id="nav-compras_llegar" class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
               <a id="nav-compras_confir" class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
               <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
-              <a id="nav-produccion" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
+              <a id="nav-prodenv" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
             </div>
           </li>
           <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
@@ -92,7 +92,7 @@
                 <th scope="col">Número Exterior</th>
                 <th scope="col">Código Postal</th>
                 <th scope="col">Modificar</th>
-                <th id="tab-borrar-p" class=""scope="col">Eliminar</th>
+                <th id="eliminar-btn" class=""scope="col">Eliminar</th>
               </tr>
             </thead>
             <tbody>
@@ -136,8 +136,8 @@
                 <td>
                   <a class="btn btn-primary bi bi-pencil-square shadow-sm" href="proveedoresU.php?IDproveedor=<?= $valor['IDproveedor'] ?>"></a>
                 </td>
-                <td id="boton-borrar-p" class="">
-                  <a  id="boton-borrar-p" class="" class="btn btn-danger bi bi-trash3-fill shadow-sm" href="model/borrarprovebd.php?IDproveedor=<?= $valor['IDproveedor'] ?>"></a>
+                <td >
+                  <a  id="eliminar-btn1" class="btn btn-danger bi bi-trash3-fill eliminar-btn1 shadow-sm" href="model/borrarprovebd.php?IDproveedor=<?= $valor['IDproveedor'] ?>"></a>
                 </td>
               </tr>
               <?php endforeach; ?>
@@ -155,39 +155,25 @@
   <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
   <script>
       var tipo_usuario = document.getElementById('usuario').innerText;
-      if(tipo_usuario=="2"){
+      if(tipo_usuario=="3"){
         //IDs de nav items
-        document.getElementById('nav-usuario').classList.add('esconder');
-        document.getElementById('nav-productos').classList.add('esconder');
-        document.getElementById('nav-clientes').classList.add('esconder');
-        document.getElementById('nav-proveedores').classList.add('esconder');
-        document.getElementById('nav-compras').classList.add('esconder');
-        document.getElementById('nav-pedidos').classList.add('esconder');
-        document.getElementById('nav-produccion').classList.add('esconder');
-      }else if(tipo_usuario=="3"){
-        //IDs de nav items
-        document.getElementById('nav-usuario').classList.add('esconder');
+       
         document.getElementById('nav-matprim').classList.add('esconder');
         document.getElementById('nav-prodter').classList.add('esconder');
         document.getElementById('nav-compras_llegar').classList.add('esconder');
         document.getElementById('nav-compras_confir').classList.add('esconder');
         document.getElementById('nav-produccion').classList.add('esconder');
         document.getElementById('nav-productos').classList.add('esconder');
-        document.getElementById('tab-borrar-p').classList.add('esconder');
-        document.getElementById('boton-borrar-p').classList.add('esconder');
-      }else if(tipo_usuario=="4"){
-        //IDs de nav items
+        document.getElementById('nav-prodenv').classList.add('esconder');
         document.getElementById('nav-usuario').classList.add('esconder');
-        document.getElementById('nav-clientes').classList.add('esconder');
-        document.getElementById('nav-proveedores').classList.add('esconder');
-        document.getElementById('nav-compras').classList.add('esconder');
-        document.getElementById('nav-pedidos').classList.add('esconder');
-        document.getElementById('nav-matprim').classList.add('esconder');
-        document.getElementById('nav-prodter').classList.add('esconder');
-        document.getElementById('nav-compras_llegar').classList.add('esconder');
-        document.getElementById('nav-compras_confir').classList.add('esconder');
+
+        document.getElementById('eliminar-btn').classList.add('esconder');
+
+        var botonesEliminar = document.querySelectorAll('.eliminar-btn1');
+        botonesEliminar.forEach(function(boton) {
+          boton.classList.add('esconder');
+        });
       }
-      
     </script>
 
 </body>

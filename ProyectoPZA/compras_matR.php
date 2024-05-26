@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php include 'model/consulta_compras_mat.php' ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +18,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style><?php include "css/style_general.css" ?></style>
   <title>Compras</title>
+
+  <style type="text/css">
+    .esconder{
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -52,7 +60,7 @@
               <a id="nav-compras_llegar" class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
               <a id="nav-compras_confir" class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
               <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
-              <a id="nav-produccion" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
+              <a id="nav-prodenv" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
             </div>
           </li>
           <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
@@ -109,26 +117,25 @@
             </div>
     </div>
 </div>
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-      'use strict';
-      window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-  </script>
+
+<span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
+    <script>
+      var tipo_usuario = document.getElementById('usuario').innerText;
+      if(tipo_usuario=="3"){
+        //IDs de nav items
+       
+        document.getElementById('nav-matprim').classList.add('esconder');
+        document.getElementById('nav-prodter').classList.add('esconder');
+        document.getElementById('nav-compras_llegar').classList.add('esconder');
+        document.getElementById('nav-compras_confir').classList.add('esconder');
+        document.getElementById('nav-produccion').classList.add('esconder');
+        document.getElementById('nav-productos').classList.add('esconder');
+        document.getElementById('nav-prodenv').classList.add('esconder');
+        document.getElementById('nav-usuario').classList.add('esconder');
+
+      }
+    </script>
+  
 </body>
 
 </html>

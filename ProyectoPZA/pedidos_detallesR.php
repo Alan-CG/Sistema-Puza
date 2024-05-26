@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php include "model/consultapedidos_detalles.php" ?>
 
 <!DOCTYPE html>
@@ -17,6 +19,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style><?php include "css/style_general.css" ?></style>
     <title>Pedidos</title>
+
+    <style type="text/css">
+    .esconder{
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -98,6 +106,24 @@
             </div>
       </div>
     </div>
+
+    <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
+    <script>
+      var tipo_usuario = document.getElementById('usuario').innerText;
+      if(tipo_usuario=="3"){
+        //IDs de nav items
+       
+        document.getElementById('nav-matprim').classList.add('esconder');
+        document.getElementById('nav-prodter').classList.add('esconder');
+        document.getElementById('nav-compras_llegar').classList.add('esconder');
+        document.getElementById('nav-compras_confir').classList.add('esconder');
+        document.getElementById('nav-produccion').classList.add('esconder');
+        document.getElementById('nav-productos').classList.add('esconder');
+        document.getElementById('nav-prodenv').classList.add('esconder');
+        document.getElementById('nav-usuario').classList.add('esconder');
+
+      }
+    </script>
 
 </body>
 

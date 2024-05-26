@@ -60,7 +60,7 @@
               <a id="nav-compras_llegar" class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
               <a id="nav-compras_confir" class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
               <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
-              <a id="nav-produccion" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
+              <a id="nav-prodenv" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
             </div>
           </li>
           <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
@@ -130,6 +130,7 @@
         document.getElementById('nav-compras').classList.add('esconder');
         document.getElementById('nav-pedidos').classList.add('esconder');
         document.getElementById('nav-produccion').classList.add('esconder');
+        document.getElementById('nav-usuario').classList.add('esconder');
       }
           
       </script>

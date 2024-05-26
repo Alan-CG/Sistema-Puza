@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php include 'model/consulta_confir_mat.php' ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +12,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style><?php include "css/style_general.css" ?></style>
     <title>Compras confirmadas</title>
+
+    <style type="text/css">
+    .esconder{
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -45,7 +53,7 @@
               <a id="nav-compras_llegar" class="dropdown-item" href="compras_llegaR.php">Compras Por Llegar</a>
               <a id="nav-compras_confir" class="dropdown-item" href="compras_confiR.php">Compras Confirmadas</a>
               <a id="nav-produccion" class="dropdown-item" href="produccionR.php">Producción</a>
-              <a id="nav-produccion" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
+              <a id="nav-prodenv" class="dropdown-item" href="productosenviadosR.php">Productos Enviados</a>
             </div>
           </li>
           <a class="btn btn-danger ml-auto bi bi-box-arrow-right" href="model/logout.php"> Cerrar Sesión </a>
@@ -104,5 +112,21 @@
             </div>
       </div>
     </div>
+    <span id="usuario" class="esconder"><?php echo $_SESSION['rol_usuario']; ?></span>
+    <script>
+      var tipo_usuario = document.getElementById('usuario').innerText;
+      if(tipo_usuario=="2"){
+             
+        
+        document.getElementById('nav-productos').classList.add('esconder');
+        document.getElementById('nav-clientes').classList.add('esconder');
+        document.getElementById('nav-proveedores').classList.add('esconder');
+        document.getElementById('nav-compras').classList.add('esconder');
+        document.getElementById('nav-pedidos').classList.add('esconder');
+        document.getElementById('nav-produccion').classList.add('esconder');
+        document.getElementById('nav-usuario').classList.add('esconder');
+      }
+          
+      </script>
 </body>
 </html>
