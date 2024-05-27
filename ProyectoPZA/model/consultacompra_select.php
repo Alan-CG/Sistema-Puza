@@ -1,9 +1,9 @@
 <?php
 // Variables
-$hostDB = '127.0.0.1';
-$nombreDB = 'bd_puza';
-$usuarioDB = 'root';
-$contrasenyaDB = '';
+$hostDB = 'localhost';
+$nombreDB = 'id22222611_bd_puza';
+$usuarioDB = 'id22222611_codebreaker';
+$contrasenyaDB = 'PmW00Bn61Auy@';
 
 //Las siguientes líneas de código se encargan de llenar los select de comprasC
 $mysqli= new mysqli($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB);

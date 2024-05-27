@@ -1,9 +1,9 @@
 <?php
 // Variables
-$hostDB = '127.0.0.1';
-$nombreDB = 'bd_puza';
-$usuarioDB = 'root';
-$contrasenyaDB = '';
+$hostDB = 'localhost';
+$nombreDB = 'id22222611_bd_puza';
+$usuarioDB = 'id22222611_codebreaker';
+$contrasenyaDB = 'PmW00Bn61Auy@';
 $codigo = isset($_REQUEST['IDproveedor']) ? $_REQUEST['IDproveedor'] : null;
 $RFC = isset($_REQUEST['input_RFCproveedor']) ? $_REQUEST['input_RFCproveedor'] : null;
 $nombre = isset($_REQUEST['input_nombreproveedor']) ? $_REQUEST['input_nombreproveedor'] : null;

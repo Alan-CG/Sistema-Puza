@@ -1,9 +1,9 @@
 <?php
 // Variables
-$hostDB = '127.0.0.1';
-$nombreDB = 'bd_puza';
-$usuarioDB = 'root';
-$contrasenyaDB = '';
+$hostDB = 'localhost';
+$nombreDB = 'id22222611_bd_puza';
+$usuarioDB = 'id22222611_codebreaker';
+$contrasenyaDB = 'PmW00Bn61Auy@';
 $codigo = isset($_REQUEST['IDproductosterminados']) ? $_REQUEST['IDproductosterminados'] : null;
 $nombre = isset($_REQUEST['input_nombrepd']) ? $_REQUEST['input_nombrepd'] : null;
 $descripcion = isset($_REQUEST['input_descripcionpd']) ? $_REQUEST['input_descripcionpd'] : null;

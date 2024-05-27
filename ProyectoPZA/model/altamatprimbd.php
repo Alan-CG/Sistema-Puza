@@ -9,10 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $cantidad = isset($_REQUEST['input_cantidad']) ? $_REQUEST['input_cantidad'] : null;
     $fechaentrada = isset($_REQUEST['input_fentrada']) ? $_REQUEST['input_fentrada'] : null;
     // Variables
-    $hostDB = '127.0.0.1';
-    $nombreDB = 'bd_puza';
-    $usuarioDB = 'root';
-    $contrasenyaDB = '';
+    $hostDB = 'localhost';
+    $nombreDB = 'id22222611_bd_puza';
+    $usuarioDB = 'id22222611_codebreaker';
+    $contrasenyaDB = 'PmW00Bn61Auy@';
     // Conecta con base de datos
     $hostPDO = "mysql:host=$hostDB;dbname=$nombreDB;";
     $miPDO = new PDO($hostPDO, $usuarioDB, $contrasenyaDB);

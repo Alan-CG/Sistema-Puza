@@ -1,9 +1,9 @@
 <?php
 // Variables
-$hostDB = '127.0.0.1';
-$nombreDB = 'bd_puza';
-$usuarioDB = 'root';
-$contrasenyaDB = '';
+$hostDB = 'localhost';
+$nombreDB = 'id22222611_bd_puza';
+$usuarioDB = 'id22222611_codebreaker';
+$contrasenyaDB = 'PmW00Bn61Auy@';
 
 // Conecta con base de datos
 $mysqli= new mysqli($hostDB,$usuarioDB,$contrasenyaDB,$nombreDB);

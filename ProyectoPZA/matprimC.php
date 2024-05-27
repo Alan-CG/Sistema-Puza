@@ -33,7 +33,7 @@
   <div class="container">
     <h4 class="text-center">Registro de Materia Prima</h4>
     <div class="card card-default border-light shadow p-3 mb-5">
-    <form action="" method="POST" class="needs-validation" novalidate>
+    <form action="model/altamatprimbd.php" method="POST" class="needs-validation" novalidate>
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="input_nombremp">Nombre</label>
